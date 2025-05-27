@@ -19,6 +19,7 @@
           <pie-chart />
         </div>
       </el-col>
+      322342424422
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
           <bar-chart />
