@@ -2,7 +2,7 @@
   <div class="dashboard-editor-container">
     <github-corner class="github-corner" />
 
-    <panel-group @handleSetLineChartData="handleSetLineChartData" />
+    <!-- <panel-group @handleSetLineChartData="handleSetLineChartData" /> -->
 
     <!-- <el-row style="background:#fff;padding:16px 16px 0;margin-bottom:32px;">
       <line-chart :chart-data="lineChartData" />
@@ -45,7 +45,7 @@
 
 <script>
 import GithubCorner from '@/components/GithubCorner'
-import PanelGroup from './components/PanelGroup'
+// import PanelGroup from './components/PanelGroup'
 // import LineChart from './components/LineChart'
 // import RaddarChart from './components/RaddarChart'
 // import PieChart from './components/PieChart'
@@ -77,7 +77,7 @@ export default {
   name: 'DashboardAdmin',
   components: {
     GithubCorner,
-    PanelGroup,
+    // PanelGroup,
     // LineChart,
     // RaddarChart,
     // PieChart,
