@@ -62,7 +62,8 @@ export default {
         },
         xAxis: [{
           type: 'category',
-          data: ['월요일', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+          // data: ['월요일', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+          data: [],
           axisTick: {
             alignWithLabel: true
           }
@@ -78,7 +79,8 @@ export default {
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
-          data: [79, 52, 200, 134, 190, 130],
+          // data: [79, 52, 200, 134, 190, 130],
+          data: [],
           animationDuration
         }
         // {
