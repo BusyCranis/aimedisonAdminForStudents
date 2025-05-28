@@ -6,6 +6,7 @@
 import echarts from 'echarts'
 require('echarts/theme/macarons') // echarts theme
 import resize from './mixins/resize'
+import axios from 'axios'
 
 const animationDuration = 6000
 
@@ -30,6 +31,10 @@ export default {
       chart: null
     }
   },
+  created() {
+    console.log(axios)
+  },
+
   mounted() {
     this.$nextTick(() => {
       this.initChart()
