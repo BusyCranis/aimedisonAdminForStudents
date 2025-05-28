@@ -99,7 +99,7 @@ export default {
         xAxis: [{
           type: 'category',
           // data: ['월요일', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-          data: [],
+          data: monthlyKeyNamesForAggr,
           axisTick: {
             alignWithLabel: true
           }
@@ -116,7 +116,7 @@ export default {
           stack: 'vistors',
           barWidth: '60%',
           // data: [79, 52, 200, 134, 190, 130],
-          data: [],
+          data: dailyValueArray,
           animationDuration
         }
         // {
