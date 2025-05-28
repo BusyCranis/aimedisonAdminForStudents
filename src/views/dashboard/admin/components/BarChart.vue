@@ -35,8 +35,8 @@ export default {
     }
   },
   created() {
-    console.log(axios)
-    console.log(this.dailyStatResponse)
+    // console.log(axios)
+    // console.log(this.dailyStatResponse)
     // this.dailyStatResponse = await axios.post('http://175.119.224.227:5003/admin/daily/chatcount', {
     //   shopId: 'aimedison'
     // })
@@ -50,8 +50,8 @@ export default {
       shopId: 'aimedison'
     })
 
-    console.log(this.dailyStatResponse)
-    console.log(this.dailyStatResponse.data)
+    // console.log(this.dailyStatResponse)
+    // console.log(this.dailyStatResponse.data)
 
     this.$nextTick(() => {
       this.initChart()
@@ -67,6 +67,9 @@ export default {
   methods: {
     initChart() {
       console.log(this.dailyStatResponse.data)
+      const monthlyKeyNamesForAggr = Object.keys(this.dailyStatResponse.data)
+
+      console.log(monthlyKeyNamesForAggr)
 
       this.chart = echarts.init(this.$el, 'macarons')
 
