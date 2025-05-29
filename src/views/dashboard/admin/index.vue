@@ -180,9 +180,9 @@ export default {
 
       console.log(dailyValueArray)
 
-      window["dailyChatKeyNamesForAggr"] = monthlyKeyNamesForAggr;
+      // window["dailyChatKeyNamesForAggr"] = monthlyKeyNamesForAggr;
 
-      window["aimedisonDailyChatValueDataArray"] = dailyValueArray;
+      // window["aimedisonDailyChatValueDataArray"] = dailyValueArray;
 
 
       this.chart.setOption({
@@ -249,8 +249,9 @@ export default {
       console.log(this.endYear)
       console.log(this.endMonth)
       console.log(this.endDay)
-      console.log(window["dailyChatKeyNamesForAggr"])
-      console.log(window["aimedisonDailyChatValueDataArray"])
+      console.log(this.dailyStatResponse.data)
+      // console.log(window["dailyChatKeyNamesForAggr"])
+      // console.log(window["aimedisonDailyChatValueDataArray"])
 
 
 
