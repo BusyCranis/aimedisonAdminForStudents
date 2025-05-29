@@ -271,24 +271,18 @@ export default {
         alert("올바른 날짜를 선택해주세요.")
 
         return
+      } else {
+        let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
+          shopId: 'aimedison',
+          dailyChatStatResponse: this.dailyStatResponse.data,
+          startYear: this.startYear,
+          startMonth: this.startMonth,
+          startDay: this.startDay,
+          endYear: this.endYear,
+          endMonth: this.endMonth,
+          endDay: this.endDay
+        })
       }
-    
-
-
-
-
-      let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
-        shopId: 'aimedison',
-        dailyChatStatResponse: this.dailyStatResponse.data,
-        startYear: this.startYear,
-        startMonth: this.startMonth,
-        startDay: this.startDay,
-        endYear: this.endYear,
-        endMonth: this.endMonth,
-        endDay: this.endDay
-      })
-    
-
 
 
 
