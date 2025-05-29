@@ -242,7 +242,7 @@ export default {
     },
 
 
-    searchChatCountByDate() {
+    async searchChatCountByDate() {
       console.log(this.startYear)
       console.log(this.startMonth)
       console.log(this.startDay)
@@ -252,6 +252,18 @@ export default {
       console.log(this.dailyStatResponse.data)
       // console.log(window["dailyChatKeyNamesForAggr"])
       // console.log(window["aimedisonDailyChatValueDataArray"])
+
+      let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
+        shopId: 'aimedison',
+        dailyChatStatResponse: this.dailyStatResponse.data,
+
+
+
+        
+      })
+    
+
+
 
 
 
