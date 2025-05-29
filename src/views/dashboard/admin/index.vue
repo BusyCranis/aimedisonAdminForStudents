@@ -24,7 +24,8 @@
 
       <el-col>
         <div class="chart-wrapper">
-          <bar-chart />
+          <!-- <bar-chart /> -->
+          <div id="barchartcomponent" :class="className" :style="{height:height,width:width}" />
         </div>
       </el-col>
     </el-row>
@@ -49,10 +50,16 @@
 // import LineChart from './components/LineChart'
 // import RaddarChart from './components/RaddarChart'
 // import PieChart from './components/PieChart'
-import BarChart from './components/BarChart'
+// import BarChart from './components/BarChart'
 import TransactionTable from './components/TransactionTable'
 import TodoList from './components/TodoList'
 import BoxCard from './components/BoxCard'
+import echarts from 'echarts'
+require('echarts/theme/macarons') // echarts theme
+import resize from './components/mixins/resize'
+import axios from 'axios'
+
+const animationDuration = 6000
 
 // const lineChartData = {
 //   newVisitis: {
@@ -81,22 +88,165 @@ export default {
     // LineChart,
     // RaddarChart,
     // PieChart,
-    BarChart,
+    // BarChart,
     TransactionTable,
     TodoList,
     BoxCard
   },
-  data() {
-    return {
-      // lineChartData: lineChartData.newVisitis
+  mixins: [resize],
+  props: {
+    className: {
+      type: String,
+      default: 'chart'
+    },
+    width: {
+      type: String,
+      default: '100%'
+    },
+    height: {
+      type: String,
+      default: '300px'
     }
   },
+  data() {
+    return {
+      chart: null,
+
+      dailyStatResponse: {}
+
+    }
+  },
+  created() {
+    // console.log(axios)
+    // console.log(this.dailyStatResponse)
+    // this.dailyStatResponse = await axios.post('http://175.119.224.227:5003/admin/daily/chatcount', {
+    //   shopId: 'aimedison'
+    // })
+
+    // console.log(this.dailyStatResponse)
+    // console.log(this.dailyStatResponse.data)
+  },
+
+  async mounted() {
+    this.dailyStatResponse = await axios.post('http://175.119.224.227:5003/admin/daily/chatcount', {
+      shopId: 'aimedison'
+    })
+
+    console.log(this.$el)
+
+    this.$nextTick(() => {
+      this.initChart()
+    })
+  },
+  beforeDestroy() {
+    if (!this.chart) {
+      return
+    }
+    this.chart.dispose()
+    this.chart = null
+  },
   methods: {
-    // handleSetLineChartData(type) {
-    //   // this.lineChartData = lineChartData[type]
-    // }
+    initChart() {
+      console.log(this.dailyStatResponse.data)
+      const monthlyKeyNamesForAggr = Object.keys(this.dailyStatResponse.data)
+      const dailyValueArray = []
+
+      console.log(monthlyKeyNamesForAggr)
+
+      for (let i = 0; i < monthlyKeyNamesForAggr.length; i++) {
+        console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]])
+
+        dailyValueArray.push(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length)
+      }
+
+      // this.chart = echarts.init(this.$el, 'macarons')
+
+      this.chart = echarts.init(document.getElementById('barchartcomponent'), 'macarons')
+
+      console.log(dailyValueArray)
+
+      this.chart.setOption({
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: { // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+          }
+        },
+        grid: {
+          top: 10,
+          left: '2%',
+          right: '2%',
+          bottom: '3%',
+          containLabel: true
+        },
+        xAxis: [{
+          type: 'category',
+          // data: ['월요일', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+          data: monthlyKeyNamesForAggr,
+          axisTick: {
+            alignWithLabel: true
+          }
+        }],
+        yAxis: [{
+          type: 'value',
+          axisTick: {
+            show: false
+          }
+        }],
+        series: [{
+          name: '대화 수',
+          type: 'bar',
+          stack: 'vistors',
+          barWidth: '60%',
+          // data: [79, 52, 200, 134, 190, 130],
+          data: dailyValueArray,
+          animationDuration
+        }
+        // {
+        //   name: 'pageB',
+        //   type: 'bar',
+        //   stack: 'vistors',
+        //   barWidth: '60%',
+        //   data: [80, 52, 200, 334, 390, 330, 220],
+        //   animationDuration
+        // }, {
+        //   name: 'pageC',
+        //   type: 'bar',
+        //   stack: 'vistors',
+        //   barWidth: '60%',
+        //   data: [30, 52, 200, 334, 390, 330, 220],
+        //   animationDuration
+        // }
+        ]
+      })
+    }
   }
 }
+
+// export default {
+//   name: 'DashboardAdmin',
+//   components: {
+//     // GithubCorner,
+//     // PanelGroup,
+//     // LineChart,
+//     // RaddarChart,
+//     // PieChart,
+//     BarChart,
+//     TransactionTable,
+//     TodoList,
+//     BoxCard
+//   },
+//   data() {
+//     return {
+//       // lineChartData: lineChartData.newVisitis
+//     }
+//   },
+//   methods: {
+//     // handleSetLineChartData(type) {
+//     //   // this.lineChartData = lineChartData[type]
+//     // }
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>

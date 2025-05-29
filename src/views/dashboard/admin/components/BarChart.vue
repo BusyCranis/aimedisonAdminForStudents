@@ -6,7 +6,7 @@
 import echarts from 'echarts'
 require('echarts/theme/macarons') // echarts theme
 import resize from './mixins/resize'
-import axios from 'axios'
+// import axios from 'axios'
 
 const animationDuration = 6000
 
@@ -46,16 +46,15 @@ export default {
   },
 
   async mounted() {
-    this.dailyStatResponse = await axios.post('http://175.119.224.227:5003/admin/daily/chatcount', {
-      shopId: 'aimedison'
-    })
+    console.log(this.$el)
 
-    // console.log(this.dailyStatResponse)
-    // console.log(this.dailyStatResponse.data)
+    // this.dailyStatResponse = await axios.post('http://175.119.224.227:5003/admin/daily/chatcount', {
+    //   shopId: 'aimedison'
+    // })
 
-    this.$nextTick(() => {
-      this.initChart()
-    })
+    // this.$nextTick(() => {
+    //   this.initChart()
+    // })
   },
   beforeDestroy() {
     if (!this.chart) {
@@ -77,6 +76,8 @@ export default {
 
         dailyValueArray.push(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length)
       }
+
+      // console.log(this.$el);
 
       this.chart = echarts.init(this.$el, 'macarons')
 
@@ -141,22 +142,3 @@ export default {
 }
 </script>
 
-<!-- <style lang="scss" scoped>
-.dashboard-editor-container {
-  padding: 32px;
-  background-color: rgb(240, 242, 245);
-  position: relative;
-
-  .chart-wrapper {
-    background: #fff;
-    padding: 16px 16px 0;
-    margin-bottom: 32px;
-  }
-}
-
-@media (max-width:1024px) {
-  .chart-wrapper {
-    padding: 8px;
-  }
-}
-</style> -->
