@@ -238,6 +238,15 @@ export default {
 
 
     searchChatCountByDate() {
+      console.log(this.startYear)
+      console.log(this.startMonth)
+      console.log(this.startDay)
+      console.log(this.endYear)
+      console.log(this.endMonth)
+      console.log(this.endDay)
+
+      
+
 
 
     }
