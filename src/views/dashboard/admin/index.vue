@@ -256,10 +256,12 @@ export default {
       let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
         shopId: 'aimedison',
         dailyChatStatResponse: this.dailyStatResponse.data,
-
-
-
-        
+        startYear: this.startYear,
+        startMonth: this.startMonth,
+        startDay: this.startDay,
+        endYear: this.endYear,
+        endMonth: this.endMonth,
+        endDay: this.endDay
       })
     
 
