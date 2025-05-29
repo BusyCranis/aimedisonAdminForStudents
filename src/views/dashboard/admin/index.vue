@@ -27,7 +27,7 @@
     </select>월 
     <input type="number"    v-model="endDay"    />일        
 
-    <button> 검색 </button>
+    <button   @click="searchChatCountByDate" > 검색 </button>
 
 
 
@@ -234,7 +234,17 @@ export default {
         // }
         ]
       })
+    },
+
+
+    searchChatCountByDate() {
+
+
     }
+
+
+
+
   }
 }
 
