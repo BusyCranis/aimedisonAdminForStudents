@@ -253,6 +253,17 @@ export default {
       // console.log(window["dailyChatKeyNamesForAggr"])
       // console.log(window["aimedisonDailyChatValueDataArray"])
 
+
+      if(this.startYear === 0 || this.startMonth === 0 || this.startDay === 0 || this.endYear === 0 || this.endMonth === 0 || this.endDay === 0) {
+        alert("올바른 날짜를 선택해주세요.")
+
+        return
+      }
+    
+
+
+
+
       let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
         shopId: 'aimedison',
         dailyChatStatResponse: this.dailyStatResponse.data,
