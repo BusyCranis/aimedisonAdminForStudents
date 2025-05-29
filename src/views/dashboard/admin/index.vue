@@ -9,14 +9,14 @@
     </el-row> -->
 
     <select  v-model="startYear">
-      <option v-for="item in yearValue"   :value="item"> {{ item }} </option>  
+      <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
     </select>년 
     <select   v-model="startMonth" >
       <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
     </select>월 
     <input type="number"    v-model="startYear"   />일  ~  
     <select   v-model="endYear"> 
-      <option v-for="item in yearValue"   :value="item"> {{ item }} </option>  
+      <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
     </select>년 
     <select>
       <option />
