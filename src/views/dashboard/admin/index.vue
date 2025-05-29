@@ -14,14 +14,15 @@
     <select   v-model="startMonth" >
       <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
     </select>월 
-    <input type="number"    v-model="startYear"   />일  ~  
+    <input type="number"    v-model="startDay"   />일  ~  
+    
     <select   v-model="endYear"> 
       <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
     </select>년 
-    <select>
-      <option />
+    <select   v-model="endMonth" >
+      <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
     </select>월 
-    <input type="number"    v-model="endYear"    />일        
+    <input type="number"    v-model="endDay"    />일        
     <button> 검색 </button>
 
     <el-row :gutter="32">
