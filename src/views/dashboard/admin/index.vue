@@ -286,7 +286,7 @@ export default {
 
 
         console.log(searchResult);
-        console.log(searchResult.data);
+        // console.log(searchResult.data);
       }
 
 
