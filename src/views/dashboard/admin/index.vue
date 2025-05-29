@@ -8,7 +8,7 @@
       <line-chart :chart-data="lineChartData" />
     </el-row> -->
 
-    <select  v-model="startYear"> <option v-for="item in yearValue"   :value="item"> {{ item }} </option>  </select>년 <select><option /></select>월 <input type="number">일  ~  <select><option /></select>년 <select><option /></select>월 <input type="number">일        <button> 검색 </button>
+    <select  v-model="startYear"> <option v-for="item in yearValue"   :value="item"> {{ item }} </option>  </select>년 <select><option     ></option></select>월 <input type="number"    v-model="startYear"   />일  ~  <select   v-model="endYear"> <option v-for="item in yearValue"   :value="item"> {{ item }} </option>  </select>년 <select><option /></select>월 <input type="number"    v-model="endYear"    />일        <button> 검색 </button>
 
     <el-row :gutter="32">
       <!-- <el-col :xs="24" :sm="24" :lg="8">
