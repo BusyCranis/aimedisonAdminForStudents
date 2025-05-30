@@ -127,6 +127,24 @@ export default {
       endDay: 0,
 
 
+      
+
+      tokenCountChart: null,
+
+      dailyTokenCountRes: {},
+
+      yearTCvalue: [2024, 2025],
+      monthTCvalue: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+
+      startTCyear: 0,
+      startTCmonth: 0,
+      startTCday: 0,
+
+      endTCyear: 0,
+      endTCmonth: 0,
+      endTCday: 0,
+
+
     }
   },
   created() {
