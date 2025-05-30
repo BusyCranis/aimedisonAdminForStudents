@@ -33,8 +33,8 @@
       </select>월 
       <input type="number"    v-model="endDay"    />일        
 
-      <button   @click="searchChatCountByDate" > 검색 </button>
-      <button   @click="setAllPeriodChatChart" > 전체기간 보기 </button>
+      <button   @click="searchChatTokenCountByDate" > 검색 </button>
+      <button   @click="setChatTokenCountAllPeriod" > 전체기간 보기 </button>
 
       <br><br>
 
