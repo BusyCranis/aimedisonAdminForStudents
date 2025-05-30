@@ -38,7 +38,7 @@
     <button   @click="setAllPeriodChatChart" > 전체기간 보기 </button>
 
 
-    <br>
+    <br><br>
 
     <!-- <el-row :gutter="32"> -->
      
@@ -127,7 +127,7 @@ export default {
       endDay: 0,
 
 
-      
+
 
       tokenCountChart: null,
 
