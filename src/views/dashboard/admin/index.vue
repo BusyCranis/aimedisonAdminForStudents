@@ -48,6 +48,12 @@
           <div id="barchartcomponent" :class="className" :style="{height:height,width:width}" />
         </div>
       </el-col>
+
+
+
+
+
+
     </el-row>
 
     <el-row :gutter="8">
