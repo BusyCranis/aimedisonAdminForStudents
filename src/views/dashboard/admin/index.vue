@@ -15,8 +15,11 @@
     <el-row :gutter="32">
 
 
-    일별 대화 수 집계
-    <br>
+
+
+
+
+    일별 대화 수 집계 <br>
 
     <select  v-model="startYear">
       <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
@@ -37,20 +40,13 @@
     <button   @click="searchChatCountByDate" > 검색 </button>
     <button   @click="setAllPeriodChatChart" > 전체기간 보기 </button>
 
-
     <br><br>
 
-    <!-- <el-row :gutter="32"> -->
-     
       <el-col>
         <div class="chart-wrapper">
-          <!-- <bar-chart /> -->
           <div id="barchartcomponent" :class="className" :style="{height:height,width:width}" />
         </div>
       </el-col>
-
-
-
 
 
 
