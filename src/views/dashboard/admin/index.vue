@@ -86,7 +86,7 @@ require('echarts/theme/macarons') // echarts theme
 import resize from './components/mixins/resize'
 import axios from 'axios'
 
-const animationDuration = 6000
+const animationDuration = 2000
 
 export default {
   name: 'DashboardAdmin',
