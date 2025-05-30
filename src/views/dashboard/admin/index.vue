@@ -29,6 +29,8 @@
 
     <button   @click="searchChatCountByDate" > 검색 </button>
 
+    <button   @click="setAllPeriodChatChart" > 전체기간 보기 </button>
+
 
 
 
@@ -365,8 +367,13 @@ export default {
 
 
 
-    }
+    },
 
+
+    async setAllPeriodChatChart() {
+
+
+    }
 
 
 
