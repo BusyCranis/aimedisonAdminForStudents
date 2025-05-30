@@ -527,17 +527,17 @@ export default {
 
       }
 
+
      
       this.tokenCountChart = echarts.init(document.getElementById('chattokencountchart'), 'macarons')
 
+
+
+
+
       console.log(dailyValueArray)
-
       // window["dailyChatKeyNamesForAggr"] = monthlyKeyNamesForAggr;
-
       // window["aimedisonDailyChatValueDataArray"] = dailyValueArray;
-
-
-
 
       this.chart.setOption({
         tooltip: {
