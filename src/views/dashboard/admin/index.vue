@@ -515,6 +515,8 @@ export default {
 
 
         for(let j = 0; j < this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length; j++) {
+          // this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j]
+          console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j]);
 
 
 
