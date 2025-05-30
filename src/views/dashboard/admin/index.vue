@@ -511,6 +511,9 @@ export default {
       console.log(monthlyKeyNamesForAggr)
 
       for (let i = 0; i < monthlyKeyNamesForAggr.length; i++) {
+        let dailyChatTokenCount = 0;
+
+
         console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]])
 
 
@@ -521,11 +524,7 @@ export default {
           console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j].answerObjectDetail.tokenlength.total_tokens);
 
 
-
-
-
-
-
+          dailyChatTokenCount = dailyChatTokenCount + this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j].answerObjectDetail.tokenlength.total_tokens;
 
 
         }
