@@ -38,6 +38,8 @@
     <button   @click="setAllPeriodChatChart" > 전체기간 보기 </button>
 
 
+    <br>
+
     <!-- <el-row :gutter="32"> -->
      
       <el-col>
