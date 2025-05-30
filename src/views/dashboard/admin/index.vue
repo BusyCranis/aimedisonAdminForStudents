@@ -625,7 +625,22 @@ export default {
 
         return
       } else {
-        
+        let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
+          shopId: 'aimedison',
+          dailyChatStatResponse: this.dailyStatResponse.data,
+          startYear: this.startTCyear,
+          startMonth: this.startTCmonth,
+          startDay: this.startTCday,
+          endYear: this.endTCyear,
+          endMonth: this.endTCmonth,
+          endDay: this.endTCday
+        })
+
+
+
+        console.log(searchResult);
+        console.log(searchResult.data);
+
       }
 
 
