@@ -517,11 +517,15 @@ export default {
         console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]])
 
 
-        for(let j = 0; j < this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length; j++) {
+        for(let j = 0; j <= this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length; j++) {
           console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j].answerObjectDetail.tokenlength.total_tokens);
-
           if(j <= this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length - 1) {
             dailyChatTokenCount = dailyChatTokenCount + this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j].answerObjectDetail.tokenlength.total_tokens;
+          } else if(j === this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length) {
+
+
+
+
           }
 
 
