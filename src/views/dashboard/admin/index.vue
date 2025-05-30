@@ -518,9 +518,6 @@ export default {
 
 
         for(let j = 0; j < this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]].length; j++) {
-          // this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j]
-          // console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j]);
-          // answerObjectDetail.tokenlength.total_tokens
           console.log(this.dailyStatResponse.data[monthlyKeyNamesForAggr[i]][j].answerObjectDetail.tokenlength.total_tokens);
 
 
