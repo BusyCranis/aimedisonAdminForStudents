@@ -665,7 +665,8 @@ export default {
 
 
 
-
+        
+        console.log(dailyValueArray)
 
         this.tokenCountChart.setOption({
           tooltip: {
