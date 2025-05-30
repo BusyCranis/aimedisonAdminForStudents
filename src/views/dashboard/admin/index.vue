@@ -16,7 +16,6 @@
 
 
 
-      
 
 
 
@@ -24,28 +23,29 @@
 
 
 
-    일별 대화 수 집계 <br>
 
-    <select  v-model="startYear">
-      <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
-    </select>년 
-    <select   v-model="startMonth" >
-      <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
-    </select>월 
-    <input type="number"    v-model="startDay"   />일  ~  
+      일별 대화 수 집계 <br>
 
-    <select   v-model="endYear"> 
-      <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
-    </select>년 
-    <select   v-model="endMonth" >
-      <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
-    </select>월 
-    <input type="number"    v-model="endDay"    />일        
+      <select  v-model="startYear">
+        <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
+      </select>년 
+      <select   v-model="startMonth" >
+        <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
+      </select>월 
+      <input type="number"    v-model="startDay"   />일  ~  
 
-    <button   @click="searchChatCountByDate" > 검색 </button>
-    <button   @click="setAllPeriodChatChart" > 전체기간 보기 </button>
+      <select   v-model="endYear"> 
+        <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
+      </select>년 
+      <select   v-model="endMonth" >
+        <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
+      </select>월 
+      <input type="number"    v-model="endDay"    />일        
 
-    <br><br>
+      <button   @click="searchChatCountByDate" > 검색 </button>
+      <button   @click="setAllPeriodChatChart" > 전체기간 보기 </button>
+
+      <br><br>
 
       <el-col>
         <div class="chart-wrapper">
