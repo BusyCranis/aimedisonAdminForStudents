@@ -641,7 +641,7 @@ export default {
         console.log(searchResult);
         console.log(searchResult.data);
 
-        const monthlyKeyNamesForAggr = Object.keys(this.dailyStatResponse.data)
+        const monthlyKeyNamesForAggr = Object.keys(searchResult.data)
         const dailyValueArray = []
 
         console.log(monthlyKeyNamesForAggr)
@@ -665,7 +665,7 @@ export default {
 
 
 
-        
+
         console.log(dailyValueArray)
 
         this.tokenCountChart.setOption({
