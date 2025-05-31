@@ -98,7 +98,7 @@
     <el-form      class="form-container">
       <div class="createPost-main-container">
         <el-form-item       style="margin-bottom: 40px;" label-width="70px" label="Summary:">
-          <el-input    type="textarea"    class="article-textarea">
+          <el-input     :rows="1"     type="textarea"    class="article-textarea">
           </el-input>
         </el-form-item>
       </div>
