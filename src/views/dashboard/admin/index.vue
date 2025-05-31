@@ -95,7 +95,7 @@
 
 
 
-    <el-form>
+    <el-form      class="form-container">
       <div class="createPost-main-container">
         <el-form-item>
           <el-input    type="textarea"    class="article-textarea">
