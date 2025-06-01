@@ -861,6 +861,11 @@ export default {
     async submitUserAccountNameSearch() {
       console.log(this.searchUserAccountName)
 
+      await axios.post("http://175.119.224.227:5003/keywordapp/admin/search/user", {
+        shopId: "aimedison",
+        searchUserAccountName: this.searchUserAccountName
+      })
+
       // "http://175.119.224.227:5003/keywordapp/admin/search/user"
 
 
