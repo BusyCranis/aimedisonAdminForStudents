@@ -139,6 +139,8 @@ import echarts from 'echarts'
 require('echarts/theme/macarons') // echarts theme
 import resize from './components/mixins/resize'
 import axios from 'axios'
+import { mapMutations } from 'vuex'
+
 
 const animationDuration = 2000
 
