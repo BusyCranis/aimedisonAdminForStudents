@@ -101,7 +101,7 @@
           <el-input   v-model="searchUserAccountName"   :rows="1"     type="textarea"    style="max-width: 100px;"    class="article-textarea">
           </el-input>
 
-          <button    @click="submitUserAccountNameSearch"> 검색 </button>
+          <button     type="button"    @click="submitUserAccountNameSearch"> 검색 </button>
         </el-form-item>
       </div>
     </el-form>
@@ -859,7 +859,10 @@ export default {
 
 
     async submitUserAccountNameSearch() {
-      
+      console.log(this.searchUserAccountName)
+
+
+
 
 
     },
