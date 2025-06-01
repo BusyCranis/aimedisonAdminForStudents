@@ -885,7 +885,7 @@ export default {
 
    
 
-      this.$store.commit("setAimedisonKeywordUserList", userSearchResult.data);
+      this.$store.commit("aimedison/setAimedisonKeywordUserList", userSearchResult.data);
 
 
      
