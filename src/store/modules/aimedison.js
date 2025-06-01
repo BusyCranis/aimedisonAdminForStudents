@@ -5,7 +5,7 @@ const state = {
 //     opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
 //     withoutAnimation: false
 //   },
-  device: 'desktop',
+  aimedisonKeywordUserList: [],
 //   size: Cookies.get('size') || 'medium'
 }
 
