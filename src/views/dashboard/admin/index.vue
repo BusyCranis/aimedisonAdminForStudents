@@ -220,6 +220,11 @@ export default {
 
 
     console.log(this.$store.state.aimedison);
+    // aimedisonKeywordUserList
+
+    console.log(this.$store.state.aimedison.aimedisonKeywordUserList);
+
+
 
     // this.yearValue = [2024, 2025]
     // this.monthValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
