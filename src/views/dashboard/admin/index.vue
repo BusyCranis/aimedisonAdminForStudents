@@ -214,7 +214,9 @@ export default {
   },
   created() {
     window["aimedisonkeyworduserlist"] = [];
+    console.log(this.$store.state);
 
+    
     console.log(this.$store.state.aimedsion);
 
     // this.yearValue = [2024, 2025]
