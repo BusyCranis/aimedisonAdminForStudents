@@ -12,7 +12,7 @@
     </el-table-column>
     <el-table-column label="Status" width="100" align="center">
 
-      <button>
+      <button    @click="findSuccessedChatHistory(scope.row.memberId)">
         상세
       </button>
       
@@ -54,6 +54,20 @@ export default {
     this.fetchData()
   },
   methods: {
+
+    async findSuccessedChatHistory(userId) {
+      console.log(userId)
+
+      
+
+
+
+    },
+
+
+
+
+
     fetchData() {
 
 
