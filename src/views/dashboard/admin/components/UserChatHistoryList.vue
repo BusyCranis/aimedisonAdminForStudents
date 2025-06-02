@@ -4,6 +4,9 @@
       <template slot-scope="scope">
         {{ scope.row.requestObjectByUserRequest | orderNoFilter }}
       </template>
+
+      <!-- .answerObjectDetail.content.content -->
+
     </el-table-column>
 
     <el-table-column label="Status" width="100" align="center">
