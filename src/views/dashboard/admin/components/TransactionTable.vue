@@ -11,6 +11,13 @@
       </template> -->
     </el-table-column>
     <el-table-column label="Status" width="100" align="center">
+
+      <button>
+        상세
+      </button>
+      
+
+
       <!-- <template slot-scope="{row}">
         <el-tag :type="row.status | statusFilter">
           {{ row.status }}
