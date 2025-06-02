@@ -1,16 +1,16 @@
 <template>
-  <el-table :data="$store.state.aimedison.aimedisonKeywordUserList" style="width: 50%; padding-top: 0px;">
-    <el-table-column label="사용자 아이디" min-width="100">
+  <el-table :data="$store.state.aimedison.aimedisonKeywordUserList" style="width: 100%; padding-top: 0px;">
+    <el-table-column label="사용자 아이디" min-width="200">
       <template slot-scope="scope">
         {{ scope.row.memberId | orderNoFilter }}
       </template>
     </el-table-column>
-    <!-- <el-table-column label="Price" width="195" align="center">
-      <template slot-scope="scope">
+    <el-table-column label="Price" width="195" align="center">
+      <!-- <template slot-scope="scope">
         ¥{{ scope.row.price | toThousandFilter }}
-      </template>
-    </el-table-column> -->
-    <el-table-column label="Status" width="50" align="center">
+      </template> -->
+    </el-table-column>
+    <el-table-column label="Status" width="100" align="center">
 
 
       <template slot-scope="{row}">

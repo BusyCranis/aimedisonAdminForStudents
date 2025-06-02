@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="$store.state.aimedison.aimedisonKeywordUserList" style="width: 50%; padding-top: 0px;">
+  <el-table :data="$store.state.aimedison.aimedisonKeywordUserList" style="width: 100%; padding-top: 0px;">
     <el-table-column label="사용자 아이디" min-width="100">
       <template slot-scope="scope">
         {{ scope.row.memberId | orderNoFilter }}
@@ -10,7 +10,7 @@
         ¥{{ scope.row.price | toThousandFilter }}
       </template>
     </el-table-column> -->
-    <el-table-column label="Status" width="50" align="center">
+    <el-table-column label="상세" width="50" align="center">
 
 
       <template slot-scope="{row}">
