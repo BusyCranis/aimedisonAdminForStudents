@@ -5,11 +5,7 @@
         {{ scope.row.memberId | orderNoFilter }}
       </template>
     </el-table-column>
-    <!-- <el-table-column label="Price" width="195" align="center">
-      <template slot-scope="scope">
-        ¥{{ scope.row.price | toThousandFilter }}
-      </template>
-    </el-table-column> -->
+
     <el-table-column label="Status" width="100" align="center">
 
 
@@ -17,11 +13,6 @@
         <button    @click="findSuccessedChatHistory(row.memberId)">
           상세
         </button>
-      
-
-        <!-- <el-tag :type="row.status | statusFilter">
-          {{ row.status }}
-        </el-tag> -->
       </template>
     </el-table-column>
   </el-table>
