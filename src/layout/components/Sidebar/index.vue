@@ -12,6 +12,8 @@
         :collapse-transition="false"
         mode="vertical"
       >
+
+      <!-- permission_routes === state.permission.routes -->
         <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
       </el-menu>
     </el-scrollbar>
