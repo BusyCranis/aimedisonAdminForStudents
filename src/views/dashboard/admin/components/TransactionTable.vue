@@ -10,7 +10,7 @@
         ¥{{ scope.row.price | toThousandFilter }}
       </template>
     </el-table-column> -->
-    <el-table-column label="상세" width="50" align="center">
+    <el-table-column label="" width="50" align="center">
 
 
       <template slot-scope="{row}">
