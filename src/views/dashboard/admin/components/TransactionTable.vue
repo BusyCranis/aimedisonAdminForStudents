@@ -63,6 +63,12 @@ export default {
 
       // selectedUser.successHistoryList[selectedUser.successHistoryList.length - 1].trialIdForEvent
 
+      // "http://175.119.224.227:5003/find/successedchathistory"
+
+      await axios.post("http://175.119.224.227:5003/find/successedchathistory", {
+        
+      })
+
 
 
 
