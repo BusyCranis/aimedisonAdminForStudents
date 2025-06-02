@@ -9,11 +9,11 @@
     <el-table-column label="Status" width="100" align="center">
 
 
-      <template slot-scope="{row}">
+      <!-- <template slot-scope="{row}">
         <button    @click="findSuccessedChatHistory(row.memberId)">
           상세
         </button>
-      </template>
+      </template> -->
     </el-table-column>
   </el-table>
 </template>
