@@ -118,7 +118,7 @@ const defaultForm = {
 
 
 
-  exist: true,
+  exist: false,
   shopDescriptionByAdmin: "",
   greeting: "",
   numberOfRecentBuyRecord: 0,
