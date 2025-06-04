@@ -378,9 +378,12 @@ export default {
 
 
     removeTargetKeyword(eachId) {
+      this.postForm.appUseFor.appEventKeywordList = this.postForm.appUseFor.appEventKeywordList.filter((item) => item.keywordId !== eachId)
 
-      
 
+
+
+      console.log(this.postForm.appUseFor.appEventKeywordList)
       
     },
 
