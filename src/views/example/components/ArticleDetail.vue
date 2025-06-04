@@ -327,7 +327,7 @@ export default {
 
     async submitChangedAppSettings() {
       await axios.post("http://175.119.224.227:7337/app/changeeachshopconfig", {
-        shopId: ,
+        shopId: "aimedison",
         greeting: ,
         appUseFor: ,
         uiConfigOption: 
