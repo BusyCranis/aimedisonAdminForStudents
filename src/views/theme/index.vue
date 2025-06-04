@@ -140,8 +140,17 @@ export default {
 
   methods: {
 
-    bringKeywordAppInstallStatus() {
+    async bringKeywordAppInstallStatus() {
+      let resFromKeywordAppServer = await axios.post("http://175.119.224.227:7337/app/checkshopexist", {
+        shopId: "aimedison"
+      })
 
+
+
+
+      console.log(resFromKeywordAppServer);
+      console.log(resFromKeywordAppServer.data);
+      // this.postForm = resFromKeywordAppServer.data;
 
 
     },
