@@ -158,8 +158,11 @@ export default {
 
 
 
-      console.log(resFromKeywordAppServer);
+      // console.log(resFromKeywordAppServer);
       console.log(resFromKeywordAppServer.data);
+      console.log(resFromKeywordAppServer.data.isAppInstalled);
+      console.log(resFromKeywordAppServer.data.isAppDisplaying);
+      
       this.isAppInstalledFromServer = resFromKeywordAppServer.data.isAppInstalled;
       this.isAppDisplayingFromServer = resFromKeywordAppServer.data.isAppDisplaying;
 
