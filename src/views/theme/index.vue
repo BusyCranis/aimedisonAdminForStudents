@@ -181,6 +181,9 @@ export default {
         
         // console.log(responseFromAppScript);
         console.log(responseFromAppScript.data);
+
+        window.location.href = "";
+
       },
 
 
@@ -195,6 +198,9 @@ export default {
 
 
         console.log(resultFromDeact);
+
+        window.location.href = "";
+
       },
 
       async SetReInstallAppService() {
@@ -208,6 +214,9 @@ export default {
 
         
         console.log(resultFromDeact);
+
+        window.location.href = "";
+
       },
 
 
