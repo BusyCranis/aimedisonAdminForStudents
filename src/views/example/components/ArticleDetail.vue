@@ -99,6 +99,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import Tinymce from '@/components/Tinymce'
 import Upload from '@/components/Upload/SingleImage3'
 import MDinput from '@/components/MDinput'
