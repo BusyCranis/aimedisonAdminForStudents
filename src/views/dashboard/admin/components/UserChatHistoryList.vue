@@ -23,11 +23,7 @@
     <el-table-column label="" width="100" align="center">
 
 
-      <!-- <template slot-scope="{row}">
-        <button    @click="findSuccessedChatHistory(row.memberId)">
-          상세
-        </button>
-      </template> -->
+   
     </el-table-column>
   </el-table>
 </template>
@@ -61,36 +57,7 @@ export default {
   },
   methods: {
 
-    async findSuccessedChatHistory(userId) {
-      console.log(userId)
-      console.log(this.$store.state.aimedison.aimedisonKeywordUserList)
-      let selectedUser = this.$store.state.aimedison.aimedisonKeywordUserList.filter((item) => item.memberId === userId)[0]
-
-      // selectedUser.successHistoryList[selectedUser.successHistoryList.length - 1].trialIdForEvent
-      // "/find/successedchathistory"
-      console.log(selectedUser)
-
-      let recentSuccessedChatHistory = await axios.post("/find/successedchathistory", {
-        shopId: window.cafe24aimedisonkeywordappshopid,
-        userId: userId,
-        trialId: selectedUser.successHistoryList[selectedUser.successHistoryList.length - 1].trialIdForEvent
-      })
-
-
-
-      console.log(recentSuccessedChatHistory)
-      console.log(recentSuccessedChatHistory.data)
-
-
-      this.$store.commit("aimedison/setRecentScsdChatHistoryOfSlctdUser", recentSuccessedChatHistory.data);
-
-
-
-
-
-
-
-    },
+   
 
 
 

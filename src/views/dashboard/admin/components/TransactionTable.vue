@@ -68,21 +68,21 @@ export default {
 
       console.log(selectedUser)
 
-      let recentSuccessedChatHistory = await axios.post("/find/successedchathistory", {
-        shopId: window.cafe24aimedisonkeywordappshopid,
-        userId: userId,
-        trialId: selectedUser.successHistoryList[selectedUser.successHistoryList.length - 1].trialIdForEvent
-      })
+
+
+      if(selectedUser.successHistoryList.length > 0) {
+        let recentSuccessedChatHistory = await axios.post("/find/successedchathistory", {
+          shopId: window.cafe24aimedisonkeywordappshopid,
+          userId: userId,
+          trialId: selectedUser.successHistoryList[selectedUser.successHistoryList.length - 1].trialIdForEvent
+        })
 
 
 
-      console.log(recentSuccessedChatHistory)
-      console.log(recentSuccessedChatHistory.data)
-
-
-      this.$store.commit("aimedison/setRecentScsdChatHistoryOfSlctdUser", recentSuccessedChatHistory.data);
-
-
+        console.log(recentSuccessedChatHistory)
+        console.log(recentSuccessedChatHistory.data)
+        this.$store.commit("aimedison/setRecentScsdChatHistoryOfSlctdUser", recentSuccessedChatHistory.data);
+      }
 
 
 
