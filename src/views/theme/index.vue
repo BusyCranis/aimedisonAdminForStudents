@@ -16,15 +16,15 @@
           Success
         </el-button> -->
 
-        <el-button type="warning">
+        <el-button type="primary">
           설치
         </el-button>
 
-        <el-button type="warning">
+        <el-button type="primary">
           설치 해제
         </el-button>
 
-        <el-button type="warning">
+        <el-button type="primary">
           재설치
         </el-button>
 
@@ -36,7 +36,10 @@
       </div>
     </el-card>
 
-    <div class="block">
+
+    
+
+    <!-- <div class="block">
       <el-button type="primary">
         Primary
       </el-button>
@@ -89,7 +92,12 @@
 
     <div class="block">
       <el-slider v-model="slideValue" />
-    </div>
+    </div> -->
+
+
+
+
+
   </div>
 </template>
 
