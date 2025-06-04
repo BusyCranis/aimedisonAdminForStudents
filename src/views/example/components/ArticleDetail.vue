@@ -363,12 +363,15 @@ export default {
 
 
     addTargetKeyword() {
-      // "eventkeyword" + Date.now()
+      this.postForm.appUseFor.appEventKeywordList.push({
+        value: this.targetKeyword,
+        keywordId: "eventkeyword" + Date.now()
+      })
 
 
-      
 
 
+      console.log(this.postForm.appUseFor.appEventKeywordList)
 
     },
 
