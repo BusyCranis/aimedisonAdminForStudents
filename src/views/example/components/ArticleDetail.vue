@@ -82,10 +82,7 @@
 
         도전별 대화 갯수:   <input type="number"    v-model="postForm.appUseFor.remainedTrialCount"   />
 
-
-
-
-
+        <br>
 
         <el-form-item style="margin-bottom: 40px;" label-width="70px" label="챗봇 제목:">
           <el-input v-model="postForm.uiConfigOption.shopAppTitle" :rows="1" type="textarea" class="article-textarea" autosize placeholder="Please enter the content" />
