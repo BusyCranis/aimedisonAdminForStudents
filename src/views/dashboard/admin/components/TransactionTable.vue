@@ -15,7 +15,7 @@
 
       <template slot-scope="{row}">
 
-        <button    @click="(row.memberId)">
+        <button    @click="findAllChatHistory(row.memberId)">
           전체 조회
         </button>
 
@@ -73,10 +73,7 @@ export default {
       // "/find/successedchathistory"
 
       this.$store.commit("aimedison/setCurrentSelectedUserId", userId);
-
       console.log(selectedUser)
-
-
 
       if(selectedUser.successHistoryList.length > 0) {
         let recentSuccessedChatHistory = await axios.post("/find/successedchathistory", {
@@ -92,8 +89,11 @@ export default {
         this.$store.commit("aimedison/setRecentScsdChatHistoryOfSlctdUser", recentSuccessedChatHistory.data);
       }
 
+    },
 
-
+    
+    async findAllChatHistory() {
+      
 
 
     },
