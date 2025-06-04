@@ -74,7 +74,7 @@
 
 
         <div    v-for="item in postForm.appUseFor.appEventKeywordList"      >
-          {{ item.value }}
+          {{ item.value }}    <button>삭제</button>
         </div>
 
 
