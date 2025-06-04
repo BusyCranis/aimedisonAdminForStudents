@@ -69,15 +69,14 @@
         </el-form-item>
 
 
-        <div>
-
-
-
-          
+        <div    v-for="item in postForm.appUseFor.appEventKeywordList"      >
+          {{ item.value }}
         </div>
 
 
 
+        <br>
+        <br>
 
 
 
@@ -89,6 +88,8 @@
 
         도전별 대화 갯수:   <input type="number"    v-model="postForm.appUseFor.remainedTrialCount"   />
 
+        <br>
+        <br>
         <br>
 
         <el-form-item style="margin-bottom: 40px;" label-width="70px" label="챗봇 제목:">
