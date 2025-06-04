@@ -63,9 +63,13 @@
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
         </el-form-item>
 
-        <el-form-item style="margin-bottom: 0px;" label-width="70px" label="이벤트 문장:">
+        <el-form-item style="margin-bottom: 0px;" label-width="100px" label="이벤트 문장:">
           <el-input v-model="targetKeyword" :rows="1" type="textarea" class="article-textarea" autosize placeholder="Please enter the content" />
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
+
+          <button>추가</button>
+
+
         </el-form-item>
 
 
