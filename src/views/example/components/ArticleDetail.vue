@@ -275,6 +275,11 @@ export default {
       console.log(resFromKeywordAppServer.data);
       this.postForm = resFromKeywordAppServer.data;
 
+      // uiConfigOption.shopAppColors.answerMessageBoxColor
+      // headerColor   inputBoxColor     mainSpaceColor     userMessageBoxColor
+
+      
+
 
 
 
