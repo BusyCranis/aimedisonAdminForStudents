@@ -111,12 +111,41 @@ import Warning from './Warning'
 import { CommentDropdown, PlatformDropdown, SourceUrlDropdown } from './Dropdown'
 
 const defaultForm = {
-
   greeting: "",
-
   targetKeyword: "",
-
   chatbotTitle: "",
+
+
+
+
+  exist: true,
+  shopDescriptionByAdmin: "",
+  greeting: "",
+  numberOfRecentBuyRecord: 0,
+  shopChatScenario: false,
+  appUseFor: {
+      appUseFor: "appforeventspec",
+      appEventKeywordList: [
+          {
+              value: "건강이 제일입니다.",
+              keywordId: "eventkeyword1746176436932"
+          }
+      ],
+      remainedTrialCount: "100",
+      totalChanceKeywordChallenge: "30"
+  },
+  isAppInstalled: true,
+  isAppDisplaying: true,
+  uiConfigOption: {
+      shopAppTitle: "Event Chatbot",
+      shopAppColors: {
+          headerColor: "rgb(28, 110, 242)",
+          mainSpaceColor: "rgb(255, 255, 255)",
+          inputBoxColor: "rgb(205, 242, 249)",
+          userMessageBoxColor: "rgb(255, 234, 5)",
+          answerMessageBoxColor: "rgb(202, 247, 221)"
+      }
+  }
 
 
 
