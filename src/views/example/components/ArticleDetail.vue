@@ -335,12 +335,25 @@ export default {
 
 
     async submitChangedAppSettings() {
+      const keywordAppUiConfigOption = {
+        shopAppTitle: this.postForm.uiConfigOption.shopAppTitle,
+        shopAppColors: {
+          headerColor: this.postForm.uiConfigOption.shopAppColors.headerColor,
+          mainSpaceColor: this.postForm.uiConfigOption.shopAppColors.mainSpaceColor,
+          inputBoxColor: this.postForm.uiConfigOption.shopAppColors.inputBoxColor,
+          userMessageBoxColor: this.postForm.uiConfigOption.shopAppColors.userMessageBoxColor,
+          answerMessageBoxColor: this.postForm.uiConfigOption.shopAppColors.answerMessageBoxColor
+        }
+      }
+
+
+
+
       const keywordAppUseFor = {
         appUseFor: "appforeventspec",
         appEventKeywordList: this.postForm.appUseFor.appEventKeywordList,
         remainedTrialCount: this.postForm.appUseFor.remainedTrialCount,
         totalChanceKeywordChallenge: this.postForm.appUseFor.totalChanceKeywordChallenge
-
       }
 
 
