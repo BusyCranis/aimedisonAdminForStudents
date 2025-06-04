@@ -74,7 +74,7 @@
 
 
         <div    v-for="item in postForm.appUseFor.appEventKeywordList"      >
-          {{ item.value }}    <button     type="button"      @click="removeTargetKeyword">삭제</button>
+          {{ item.value }}    <button     type="button"      @click="removeTargetKeyword(item.keywordId)">삭제</button>
         </div>
 
 
@@ -377,7 +377,9 @@ export default {
 
 
 
-    removeTargetKeyword() {
+    removeTargetKeyword(eachId) {
+
+      
 
       
     },
