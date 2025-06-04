@@ -7,7 +7,18 @@
         </a>
       </div>
       <div class="box-item">
-        <span class="field-label">Change Theme : </span>
+        <!-- <span class="field-label">Change Theme : </span> -->
+
+        <!-- <el-button type="primary">
+          Primary
+        </el-button>
+        <el-button type="success">
+          Success
+        </el-button> -->
+
+        <el-button type="warning">
+          Warning
+        </el-button>
 
 
         <!-- <el-switch v-model="theme" /> -->
