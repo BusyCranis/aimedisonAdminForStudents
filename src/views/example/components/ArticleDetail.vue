@@ -120,12 +120,12 @@
 
 
 
-      
+
 
 
 
       <el-button    type="button"     style="margin-left: 10px;"  @click="">
-        Publish
+        변경사항 적용
       </el-button>
 
 
