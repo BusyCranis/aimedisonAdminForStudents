@@ -16,13 +16,13 @@
           Success
         </el-button> -->
 
-        <el-button type="primary"      v-if="isAppInstalledFromServer === false">
+        <el-button type="primary"      v-if="isAppInstalledFromServer === false"     @click="requestInsertScriptInService">
           설치
         </el-button>
-        <el-button type="primary"      v-else-if="isAppInstalledFromServer === true && isAppDisplayingFromServer === false">
+        <el-button type="primary"      v-else-if="isAppInstalledFromServer === true && isAppDisplayingFromServer === false"      @click="SetReInstallAppService">
           재설치
         </el-button>
-        <el-button type="primary"       v-else-if="isAppDisplayingFromServer === true">
+        <el-button type="primary"       v-else-if="isAppDisplayingFromServer === true"      @click="deactivateAppService">
           설치 해제
         </el-button>
 
