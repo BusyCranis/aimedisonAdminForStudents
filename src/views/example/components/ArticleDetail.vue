@@ -76,6 +76,10 @@
 
 
 
+        <input type="number"    v-model="postForm.appUseFor.totalChanceKeywordChallenge"   />
+
+        <input type="number"    v-model="postForm.appUseFor.remainedTrialCount"   />
+
 
 
 
@@ -127,8 +131,8 @@ const defaultForm = {
       appEventKeywordList: [
         
       ],
-      remainedTrialCount: "",
-      totalChanceKeywordChallenge: ""
+      remainedTrialCount: 0,
+      totalChanceKeywordChallenge: 0
   },
   isAppInstalled: true,
   isAppDisplaying: true,
