@@ -67,14 +67,14 @@
           <el-input v-model="targetKeyword" :rows="1" type="textarea" class="article-textarea" autosize placeholder="Please enter the content" />
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
 
-          <button>추가</button>
+          <button   type="button"    @click="addTargetKeyword">추가</button>
 
 
         </el-form-item>
 
 
         <div    v-for="item in postForm.appUseFor.appEventKeywordList"      >
-          {{ item.value }}    <button>삭제</button>
+          {{ item.value }}    <button     type="button"      @click="removeTargetKeyword">삭제</button>
         </div>
 
 
@@ -335,7 +335,6 @@ export default {
 
 
     async submitChangedAppSettings() {
-
       const keywordAppUseFor = {
         appUseFor: "appforeventspec",
         // appEventKeywordList: [],
@@ -358,18 +357,25 @@ export default {
       })
 
 
-    
+
+    },
 
 
 
-
-
-
-
-
+    addTargetKeyword() {
 
 
     },
+
+    
+
+    removeTargetKeyword() {
+
+      
+    },
+
+
+
 
 
 
