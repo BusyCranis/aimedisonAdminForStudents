@@ -326,7 +326,12 @@ export default {
 
 
     async submitChangedAppSettings() {
-      // await axios.post("http://175.119.224.227:7337/app/changeeachshopconfig", {})
+      await axios.post("http://175.119.224.227:7337/app/changeeachshopconfig", {
+        shopId: ,
+        greeting: ,
+        appUseFor: ,
+        uiConfigOption: 
+      })
 
 
       // shopId: keyForSaveAuthTokenInLocal,
