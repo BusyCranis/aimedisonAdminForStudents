@@ -37,7 +37,7 @@
     </el-card>
 
 
-    
+
 
     <!-- <div class="block">
       <el-button type="primary">
@@ -125,7 +125,30 @@ export default {
     theme() {
       toggleClass(document.body, 'custom-theme')
     }
-  }
+  },
+
+
+
+  mounted() {
+
+
+
+
+  },
+
+
+
+  methods: {
+
+
+
+
+
+
+  },
+
+
+
 }
 </script>
 
