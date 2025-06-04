@@ -126,24 +126,21 @@ const defaultForm = {
   appUseFor: {
       appUseFor: "appforeventspec",
       appEventKeywordList: [
-          {
-              value: "건강이 제일입니다.",
-              keywordId: "eventkeyword1746176436932"
-          }
+        
       ],
-      remainedTrialCount: "100",
-      totalChanceKeywordChallenge: "30"
+      remainedTrialCount: "",
+      totalChanceKeywordChallenge: ""
   },
   isAppInstalled: true,
   isAppDisplaying: true,
   uiConfigOption: {
-      shopAppTitle: "Event Chatbot",
+      shopAppTitle: "",
       shopAppColors: {
-          headerColor: "rgb(28, 110, 242)",
-          mainSpaceColor: "rgb(255, 255, 255)",
-          inputBoxColor: "rgb(205, 242, 249)",
-          userMessageBoxColor: "rgb(255, 234, 5)",
-          answerMessageBoxColor: "rgb(202, 247, 221)"
+          headerColor: "",
+          mainSpaceColor: "",
+          inputBoxColor: "",
+          userMessageBoxColor: "",
+          answerMessageBoxColor: ""
       }
   }
 
