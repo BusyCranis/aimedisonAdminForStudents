@@ -25,7 +25,13 @@ const mutations = {
 
   setCurrentSelectedUserId: (state, payload) => {
     state.currentSelectedUserId = payload
-  }
+  },
+
+  setKeywordShopAimedison: (state, payload) => {
+    state.keywordShopAimedison = payload
+  },
+
+  
 
 }
 
