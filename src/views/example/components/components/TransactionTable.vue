@@ -15,16 +15,7 @@
 
       <template slot-scope="{row}">
 
-        <button    @click="findAllChatHistory(row.memberId)">
-          전체 조회
-        </button>
-
-
-
-
-        <button    @click="findSuccessedChatHistory(row.memberId)">
-          성공한 기록만 조회
-        </button>
+        <button     type="button"      @click="removeTargetKeyword(item.keywordId)">삭제</button>
       
 
         <!-- <el-tag :type="row.status | statusFilter">
@@ -60,9 +51,20 @@ export default {
   created() {
     // console.log(window["aimedisonkeyworduserlist"]);
 
-    this.fetchData()
+    // this.fetchData()
   },
   methods: {
+    removeTargetKeyword(eachId) {
+      this.postForm.appUseFor.appEventKeywordList = this.postForm.appUseFor.appEventKeywordList.filter((item) => item.keywordId !== eachId)
+
+
+
+
+      console.log(this.postForm.appUseFor.appEventKeywordList)
+      
+    },
+
+
 
     async findSuccessedChatHistory(userId) {
       console.log(userId)
