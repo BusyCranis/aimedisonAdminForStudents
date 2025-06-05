@@ -105,7 +105,7 @@
 
           <el-button     type="button"    @click="submitUserAccountNameSearch"    style="background-color: skyblue;    color: black;" > 검색 </el-button>
           <button   type="button"    style="min-width: 600px;     visibility: hidden;" >  a  </button>
-          <button     type="button"    @click="resetKeywordTrialCount"> 참여 횟수 리셋 </button>
+          <el-button     type="button"    @click="resetKeywordTrialCount"      style="background-color: skyblue;    color: black;"> 참여 횟수 리셋 </el-button>
         </el-form-item>
       </div>
     </el-form>
