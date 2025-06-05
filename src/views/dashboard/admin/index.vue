@@ -76,7 +76,7 @@
       <input type="number"    v-model="endDay"    />일        
 
       <button   type="button"    style="max-width: 1px;     visibility: hidden;" >  a  </button>
-      
+
 
       <el-button   @click="searchChatCountByDate"   style="background-color: skyblue;    color: black;" > 검색 </el-button>
       <el-button   @click="setAllPeriodChatChart"   style="background-color: skyblue;    color: black;" > 전체기간 보기 </el-button>
@@ -103,7 +103,7 @@
 
     <el-form      class="form-container">
       <div class="createPost-main-container">
-        <el-form-item       style="margin-bottom: 40px;" label-width="70px" label="검색어:">
+        <el-form-item       style="margin-bottom: 0px;" label-width="70px" label="검색어:">
           <el-input   v-model="searchUserAccountName"   :rows="1"     type="textarea"    style="max-width: 125px;"    class="article-textarea">
           </el-input>
 
