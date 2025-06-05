@@ -425,6 +425,9 @@ export default {
 
       console.log(this.postForm.appUseFor.appEventKeywordList)
 
+
+      this.$store.commit("aimedison/addKeywordShopAimedison", eachId);
+
     },
 
 
