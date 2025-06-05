@@ -56,10 +56,9 @@ export default {
   methods: {
     removeTargetKeyword(eachId) {
 
+      this.$store.commit("aimedison/removeKeywordShopAimedison", eachId);
 
 
-
-      
       // this.postForm.appUseFor.appEventKeywordList = this.postForm.appUseFor.appEventKeywordList.filter((item) => item.keywordId !== eachId)
       // console.log(this.postForm.appUseFor.appEventKeywordList)
       
