@@ -145,6 +145,7 @@
 
 <script>
 import axios from 'axios'
+import TransactionTable from './components/TransactionTable'
 import Tinymce from '@/components/Tinymce'
 import Upload from '@/components/Upload/SingleImage3'
 import MDinput from '@/components/MDinput'
@@ -195,7 +196,7 @@ const defaultForm = {
 
 export default {
   name: 'ArticleDetail',
-  components: { Tinymce, MDinput, Upload, Sticky, Warning, CommentDropdown, PlatformDropdown, SourceUrlDropdown },
+  components: { Tinymce, MDinput, Upload, Sticky, Warning, CommentDropdown, PlatformDropdown, SourceUrlDropdown, TransactionTable },
   props: {
     isEdit: {
       type: Boolean,
