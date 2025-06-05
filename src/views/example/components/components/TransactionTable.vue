@@ -1,6 +1,6 @@
 <template>
   <el-table :data="$store.state.aimedison.keywordShopAimedison" style="width: 100%; padding-top: 0px;">
-    <el-table-column label="키워드 목록" min-width="100">
+    <el-table-column    style="min-height: 0px;   max-height: 40px;"         label="키워드 목록" min-width="100" >
       <template slot-scope="scope">
         {{ scope.row.value }}
       </template>
@@ -10,7 +10,7 @@
         ¥{{ scope.row.price | toThousandFilter }}
       </template>
     </el-table-column> -->
-    <el-table-column label="" width="100" align="center">
+    <el-table-column      style="min-height: 0px;   max-height: 40px;"      label="" width="100" align="center">
 
 
       <template slot-scope="{row}">
