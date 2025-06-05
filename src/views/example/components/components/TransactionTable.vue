@@ -15,7 +15,7 @@
 
       <template slot-scope="{row}">
 
-        <button     type="button"      @click="removeTargetKeyword(item.keywordId)">삭제</button>
+        <button     type="button"      @click="removeTargetKeyword(row.keywordId)">삭제</button>
       
 
         <!-- <el-tag :type="row.status | statusFilter">
