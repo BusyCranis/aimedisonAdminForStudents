@@ -326,6 +326,10 @@ export default {
 
 
     async submitChangedAppSettings() {
+      this.postForm.appUseFor.appEventKeywordList = this.$store.state.aimedison.keywordShopAimedison;
+
+
+
       let hexadecimalHeaderCode = this.postForm.uiConfigOption.shopAppColors.headerColor;
       console.log(this.postForm.uiConfigOption.shopAppColors.headerColor);
     
@@ -415,15 +419,15 @@ export default {
 
 
     addTargetKeyword() {
-      this.postForm.appUseFor.appEventKeywordList.push({
-        value: this.targetKeyword,
-        keywordId: "eventkeyword" + Date.now()
-      })
+      // this.postForm.appUseFor.appEventKeywordList.push({
+      //   value: this.targetKeyword,
+      //   keywordId: "eventkeyword" + Date.now()
+      // })
 
 
 
 
-      console.log(this.postForm.appUseFor.appEventKeywordList)
+      // console.log(this.postForm.appUseFor.appEventKeywordList)
 
 
       this.$store.commit("aimedison/addKeywordShopAimedison", eachId);
@@ -433,12 +437,12 @@ export default {
 
 
     removeTargetKeyword(eachId) {
-      this.postForm.appUseFor.appEventKeywordList = this.postForm.appUseFor.appEventKeywordList.filter((item) => item.keywordId !== eachId)
+      // this.postForm.appUseFor.appEventKeywordList = this.postForm.appUseFor.appEventKeywordList.filter((item) => item.keywordId !== eachId)
 
 
 
 
-      console.log(this.postForm.appUseFor.appEventKeywordList)
+      // console.log(this.postForm.appUseFor.appEventKeywordList)
       
     },
 
