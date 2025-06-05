@@ -67,7 +67,7 @@
           <el-input v-model="targetKeyword" :rows="1" type="textarea" class="article-textarea" autosize placeholder="Please enter the content" />
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
 
-          <button   type="button"    @click="addTargetKeyword">추가</button>
+          <el-button   type="button"    @click="addTargetKeyword"    style="background-color: skyblue;    color: black;    padding: 5px;"  >추가</el-button>
 
         </el-form-item>
 
