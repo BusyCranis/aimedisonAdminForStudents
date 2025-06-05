@@ -32,10 +32,15 @@ const mutations = {
   setKeywordShopAimedison: (state, payload) => {
     state.keywordShopAimedison = payload
   },
-  
+
 
   addKeywordShopAimedison: (state, payload) => {
     state.keywordShopAimedison.push(payload);
+  },
+
+
+  removeKeywordShopAimedison: (state, payload) => {
+    state.keywordShopAimedison = state.keywordShopAimedison.filter(item => item.keywordId !== payload);
   },
 
 
