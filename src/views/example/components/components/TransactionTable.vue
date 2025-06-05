@@ -1,8 +1,8 @@
 <template>
   <el-table :data="$store.state.aimedison.keywordShopAimedison" style="width: 100%; padding-top: 0px;">
-    <el-table-column label="사용자 아이디" min-width="100">
+    <el-table-column label="" min-width="100">
       <template slot-scope="scope">
-        {{ scope.row.memberId | orderNoFilter }}
+        {{ scope.row.value }}
       </template>
     </el-table-column>
     <!-- <el-table-column label="Price" width="195" align="center">
