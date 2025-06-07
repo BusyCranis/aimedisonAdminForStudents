@@ -1,6 +1,6 @@
 <template>
   <el-table :data="$store.state.aimedison.keywordShopAimedison"        v-if="$store.state.aimedison.keywordShopAimedison.length > 0"         style="width: 100%; padding-top: 0px;">
-    <el-table-column              label="키워드 목록" min-width="100" >
+    <el-table-column      style="padding-right: 0px;     padding-left: 0px;"        label="키워드 목록"     min-width="150" >
       <template slot-scope="scope">
         {{ scope.row.value }}
       </template>
@@ -10,12 +10,12 @@
         ¥{{ scope.row.price | toThousandFilter }}
       </template>
     </el-table-column> -->
-    <el-table-column          width="100" align="center">
+    <el-table-column          width="75" align="center">
 
 
       <template slot-scope="{row}">
 
-        <el-button     type="button"      @click="removeTargetKeyword(row.keywordId)"     style="background-color: skyblue;    color: black;    padding: 5px;" >삭제</el-button>
+        <el-button     type="button"      @click="removeTargetKeyword(row.keywordId)"     style="background-color: skyblue;    color: black;    padding: 3px;" >삭제</el-button>
       
 
         <!-- <el-tag :type="row.status | statusFilter">

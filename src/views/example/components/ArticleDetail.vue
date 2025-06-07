@@ -71,9 +71,8 @@
 
         </el-form-item>
 
-
         <el-row :gutter="8">
-          <el-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 4}" style="padding-left:50px;  padding-right:0px;margin-bottom:0px;">
+          <el-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 4}" style="padding-left:50px;  padding-right:0px; margin-bottom:0px;">
             <TransactionTable />
           </el-col>
         </el-row>
