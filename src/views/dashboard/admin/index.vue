@@ -262,9 +262,9 @@ export default {
     console.log(this.$el)
 
     this.$nextTick(() => {
-      this.initChart()
+      // this.initChart()
 
-      this.initTokenCountChart()
+      // this.initTokenCountChart()
 
     })
   },
