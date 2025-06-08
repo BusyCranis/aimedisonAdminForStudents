@@ -428,17 +428,23 @@ export default {
 
 
     addTargetKeyword() {
-      // this.postForm.appUseFor.appEventKeywordList.push({
-      //   value: this.targetKeyword,
-      //   keywordId: "eventkeyword" + Date.now()
-      // })
-      // console.log(this.postForm.appUseFor.appEventKeywordList)
-
       this.$store.commit("aimedison/addKeywordShopAimedison", {
         value: this.targetKeyword,
         keywordId: "eventkeyword" + Date.now()
       });
 
+
+
+
+
+      if(document.querySelectorAll(".cell")) {
+        if(document.querySelectorAll(".cell").length > 0) {
+          for(let i = 0; document.querySelectorAll(".cell").length; i++) {
+            document.querySelectorAll(".cell")[i].style.paddingLeft = "0px";
+            document.querySelectorAll(".cell")[i].style.paddingRight = "0px";
+          }
+        }
+      }
 
     },
 
