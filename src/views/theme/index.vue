@@ -169,7 +169,12 @@ export default {
     },
 
     async requestInsertScriptInService() {
+      const confirmPrompt = "정말로 이 앱을 설치하시겠습니까?";
+
       
+      if(this.useConfirmHandler(confirmPrompt) === true) {
+
+      }
       
       let responseFromAppScript = await axios.post("/app/insertscript", {
         urlSearchKey: window.cafe24aimedisonkeywordappshopid
