@@ -172,21 +172,21 @@ export default {
       const confirmPrompt = "정말로 이 앱을 설치하시겠습니까?";
 
 
+
       if(this.useConfirmHandler(confirmPrompt) === true) {
+        let responseFromAppScript = await axios.post("/app/insertscript", {
+          urlSearchKey: window.cafe24aimedisonkeywordappshopid
+        });
+        
+
+
+        
+        // console.log(responseFromAppScript);
+        console.log(responseFromAppScript.data);
+
+        window.location.href = "";
 
       }
-      
-      let responseFromAppScript = await axios.post("/app/insertscript", {
-        urlSearchKey: window.cafe24aimedisonkeywordappshopid
-      });
-      
-
-
-      
-      // console.log(responseFromAppScript);
-      console.log(responseFromAppScript.data);
-
-      window.location.href = "";
 
     },
 
@@ -194,21 +194,20 @@ export default {
     async deactivateAppService() {
       const confirmPrompt = "정말로 이 앱의 설치를 해제하시겠습니까?";
 
+
       
       if(this.useConfirmHandler(confirmPrompt) === true) {
+        let resultFromDeact = await axios.post("/app/deactivate", {
+          shopId: window.cafe24aimedisonkeywordappshopid
+        });
+        
+
+
+        console.log(resultFromDeact);
+
+        window.location.href = "";
 
       }
-    
-
-      let resultFromDeact = await axios.post("/app/deactivate", {
-        shopId: window.cafe24aimedisonkeywordappshopid
-      });
-      
-
-
-      console.log(resultFromDeact);
-
-      window.location.href = "";
 
     },
 
@@ -216,20 +215,19 @@ export default {
       const confirmPrompt = "정말로 이 앱을 재설치하시겠습니까?";
 
       
+      
       if(this.useConfirmHandler(confirmPrompt) === true) {
+        let resultFromDeact = await axios.post("/app/reinstallapp", {
+          shopId: window.cafe24aimedisonkeywordappshopid
+        });
+        
+
+        
+        console.log(resultFromDeact);
+
+        window.location.href = "";
 
       }
-    
-
-      let resultFromDeact = await axios.post("/app/reinstallapp", {
-        shopId: window.cafe24aimedisonkeywordappshopid
-      });
-      
-
-      
-      console.log(resultFromDeact);
-
-      window.location.href = "";
 
     },
 
