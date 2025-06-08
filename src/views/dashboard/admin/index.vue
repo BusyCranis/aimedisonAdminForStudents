@@ -280,6 +280,11 @@ export default {
 
       // this.initTokenCountChart()
 
+      console.log(this.chart)
+
+      console.log(this.tokenCountChart)
+
+
     })
   },
   beforeDestroy() {
