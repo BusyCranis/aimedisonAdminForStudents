@@ -37,7 +37,7 @@
 
 
       <el-button    v-if="hasLoadedChatTokenDataFromServer === true && chart != null && tokenCountChart != null"    @click="searchChatTokenCountByDate"   style="background-color: skyblue;    color: black;" > 검색 </el-button>
-      <el-button   @click="setChatTokenCountAllPeriod"   style="background-color: skyblue;    color: black;" > 전체기간 보기 </el-button>
+      <el-button    v-if="hasLoadedChatTokenDataFromServer === true && chart != null && tokenCountChart != null"    @click="setChatTokenCountAllPeriod"   style="background-color: skyblue;    color: black;" > 전체기간 보기 </el-button>
 
       <br><br>
 
@@ -78,8 +78,8 @@
       <button   type="button"    style="max-width: 1px;     visibility: hidden;" >  a  </button>
 
 
-      <el-button   @click="searchChatCountByDate"   style="background-color: skyblue;    color: black;" > 검색 </el-button>
-      <el-button   @click="setAllPeriodChatChart"   style="background-color: skyblue;    color: black;" > 전체기간 보기 </el-button>
+      <el-button    v-if="hasLoadedChatTokenDataFromServer === true && chart != null && tokenCountChart != null"    @click="searchChatCountByDate"   style="background-color: skyblue;    color: black;" > 검색 </el-button>
+      <el-button    v-if="hasLoadedChatTokenDataFromServer === true && chart != null && tokenCountChart != null"    @click="setAllPeriodChatChart"   style="background-color: skyblue;    color: black;" > 전체기간 보기 </el-button>
 
       <br><br>
 
