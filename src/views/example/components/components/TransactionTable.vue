@@ -1,7 +1,7 @@
 <template>
   <el-table :data="$store.state.aimedison.keywordShopAimedison"        v-if="$store.state.aimedison.keywordShopAimedison.length > 0"         style="width: 100%; padding-top: 0px;">
     <el-table-column      style="padding-right: 0px;     padding-left: 0px;"        label="키워드 목록"     min-width="150" >
-      <template slot-scope="scope">
+      <template       style="padding-right: 0px;     padding-left: 0px;"       slot-scope="scope">
         {{ scope.row.value }}
       </template>
     </el-table-column>
