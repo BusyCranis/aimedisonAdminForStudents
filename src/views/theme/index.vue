@@ -169,55 +169,72 @@ export default {
     },
 
     async requestInsertScriptInService() {
-        // console.log(document.getElementById("newlyinstallaimedisonappbutton"));
-        // document.getElementById("newlyinstallaimedisonappbutton").remove();
       
-        let responseFromAppScript = await axios.post("/app/insertscript", {
-          urlSearchKey: window.cafe24aimedisonkeywordappshopid
-        });
-       
+      
+      let responseFromAppScript = await axios.post("/app/insertscript", {
+        urlSearchKey: window.cafe24aimedisonkeywordappshopid
+      });
+      
 
 
-        
-        // console.log(responseFromAppScript);
-        console.log(responseFromAppScript.data);
+      
+      // console.log(responseFromAppScript);
+      console.log(responseFromAppScript.data);
 
-        window.location.href = "";
+      window.location.href = "";
 
-      },
-
-
-      async deactivateAppService() {
-        // console.log(keyForSaveAuthTokenInLocal);
-        // document.getElementById("checkdeacteappservice").remove();
-
-        let resultFromDeact = await axios.post("/app/deactivate", {
-          shopId: window.cafe24aimedisonkeywordappshopid
-        });
-       
+    },
 
 
-        console.log(resultFromDeact);
+    async deactivateAppService() {
+    
 
-        window.location.href = "";
+      let resultFromDeact = await axios.post("/app/deactivate", {
+        shopId: window.cafe24aimedisonkeywordappshopid
+      });
+      
 
-      },
 
-      async SetReInstallAppService() {
-        // console.log(keyForSaveAuthTokenInLocal);
-        // document.getElementById("checkreinstallappserver").remove();
+      console.log(resultFromDeact);
 
-        let resultFromDeact = await axios.post("/app/reinstallapp", {
-          shopId: window.cafe24aimedisonkeywordappshopid
-        });
-        
+      window.location.href = "";
 
-        
-        console.log(resultFromDeact);
+    },
 
-        window.location.href = "";
+    async SetReInstallAppService() {
+    
 
-      },
+      let resultFromDeact = await axios.post("/app/reinstallapp", {
+        shopId: window.cafe24aimedisonkeywordappshopid
+      });
+      
+
+      
+      console.log(resultFromDeact);
+
+      window.location.href = "";
+
+    },
+
+
+
+
+
+
+    useConfirmHandler(confirmMessage) {
+      const resultByUser = window.confirm(confirmMessage);
+
+
+      
+      return resultByUser;
+
+    },
+
+
+
+
+
+
 
 
 
