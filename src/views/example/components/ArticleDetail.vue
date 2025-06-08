@@ -322,13 +322,13 @@ export default {
 
         if(window.document.querySelectorAll(".cell")) {
           if(window.document.querySelectorAll(".cell").length > 0) {
-            for(let i = 0; i > window.document.querySelectorAll(".cell").length; i++) {
+            for(let i = 0; i < window.document.querySelectorAll(".cell").length; i++) {
               window.document.querySelectorAll(".cell")[i].style.paddingLeft = "0px";
               window.document.querySelectorAll(".cell")[i].style.paddingRight = "0px";
             }
           }
         }
-      }, 10);
+      }, 5);
 
 
     },
@@ -468,13 +468,13 @@ export default {
 
         if(window.document.querySelectorAll(".cell")) {
           if(window.document.querySelectorAll(".cell").length > 0) {
-            for(let i = 0; i > window.document.querySelectorAll(".cell").length; i++) {
+            for(let i = 0; i < window.document.querySelectorAll(".cell").length; i++) {
               window.document.querySelectorAll(".cell")[i].style.paddingLeft = "0px";
               window.document.querySelectorAll(".cell")[i].style.paddingRight = "0px";
             }
           }
         }
-      }, 10);
+      }, 5);
 
 
     },
