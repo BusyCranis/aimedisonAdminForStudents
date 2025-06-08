@@ -108,7 +108,8 @@
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
         </el-form-item>
 
-
+        
+        <br>
 
 
         챗봇 색상
