@@ -955,11 +955,12 @@ export default {
 
 
 
-    makeConfirmMessage() {
+    useConfirmHandler(confirmMessage) {
+      const resultByUser = window.confirm(confirmMessage);
 
 
       
-
+      return resultByUser;
 
     },
 
