@@ -409,18 +409,18 @@ export default {
       }
 
 
+      const confirmPrompt = "정말로 모든 변경 사항을 적용하시겠습니까?";
 
 
 
-
-
-      await axios.post("/app/changeeachshopconfig", {
-        shopId: window.cafe24aimedisonkeywordappshopid,
-        greeting: this.postForm.greeting,
-        appUseFor: keywordAppUseFor,
-        uiConfigOption: keywordAppUiConfigOption
-      })
-
+      if(this.useConfirmHandler(confirmPrompt) === true) {
+        await axios.post("/app/changeeachshopconfig", {
+          shopId: window.cafe24aimedisonkeywordappshopid,
+          greeting: this.postForm.greeting,
+          appUseFor: keywordAppUseFor,
+          uiConfigOption: keywordAppUiConfigOption
+        })
+      }
 
 
     },
