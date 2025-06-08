@@ -98,6 +98,10 @@ export default {
 
     
     async findAllChatHistory(userId) {
+      console.log(userId)
+      this.$store.commit("aimedison/setCurrentSelectedUserId", userId);
+
+
       let recentSuccessedChatHistory = await axios.post("/find/allchathistory", {
         shopId: window.cafe24aimedisonkeywordappshopid,
         userId: userId,
