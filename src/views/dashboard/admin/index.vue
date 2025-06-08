@@ -931,9 +931,9 @@ export default {
 
     async resetKeywordTrialCount() {
       console.log(this.$store.state.aimedison.currentSelectedUserId)
-      const confirmPrompt = "정말로 " + this.$store.state.aimedison.currentSelectedUserId + "님의 대화 내역을 리셋 하시겠습니까?";
+      const confirmPrompt = "정말로 " + this.$store.state.aimedison.currentSelectedUserId + "님의 참여 횟수를 리셋 하시겠습니까?";
 
-      
+
 
       if(this.useConfirmHandler(confirmPrompt) === true) {
         const resultAfterReset = await axios.post("/resetaftersuccess", {
