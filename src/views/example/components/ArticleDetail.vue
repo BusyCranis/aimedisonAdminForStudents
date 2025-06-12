@@ -143,7 +143,7 @@
 
 
 
-      <el-button    type="button"     style="margin-left: 750px;    background-color: skyblue;    color: black;"   @click="submitChangedAppSettings">
+      <el-button    type="button"    id="submitchangebutton"     style="background-color: skyblue;    color: black;"   @click="submitChangedAppSettings">
         변경사항 적용
       </el-button>
 
@@ -493,6 +493,22 @@ export default {
       return resultByUser;
 
     },
+
+
+    applyResponsiveStyle() {
+      document.getElementById("submitchangebutton")
+     
+
+      if (window.innerWidth < 768) {
+        document.getElementById("submitchangebutton").style.marginLeft = "100px";
+      
+      } else {
+        document.getElementById("submitchangebutton").style.marginLeft = "300px";
+      
+      }
+    },
+
+
 
 
 
