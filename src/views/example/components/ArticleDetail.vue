@@ -503,7 +503,12 @@ export default {
         document.getElementById("submitchangebutton").style.marginLeft = "1395px";
       } else if(window.innerWidth <= 1550 && window.innerWidth > 1350) {
         document.getElementById("submitchangebutton").style.marginLeft = "1200px";
+      } else if(window.innerWidth <= 1350 && window.innerWidth > 1050) {
+        document.getElementById("submitchangebutton").style.marginLeft = "925px";
+      } else if(window.innerWidth <= 1050 && window.innerWidth > 750) {
+        document.getElementById("submitchangebutton").style.marginLeft = "640px";
       } else if() {
+
         
       }
 
