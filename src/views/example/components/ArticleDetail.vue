@@ -284,11 +284,17 @@ export default {
   },
 
   async mounted() {
-
     await this.getKeywordAppInfo()
+
+    this.applyResponsiveStyle()
 
   },
 
+
+  updated() {
+    this.applyResponsiveStyle()
+
+  },
 
 
 
