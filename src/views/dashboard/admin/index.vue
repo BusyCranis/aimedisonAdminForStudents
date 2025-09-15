@@ -18,13 +18,7 @@
 
 
     
-    <!-- <el-date-picker 
-      v-model="displayTime"
-      type="datetime" format="yyyy-MM-dd HH:mm:ss" 
-      value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
-      placeholder="Select date and time"   
-      @change="inputPickStartDateTime"
-    /> -->
+  
     
 
     <!-- displayEndTime -->
@@ -101,21 +95,42 @@
 
       일별 대화 수 집계 <br>
 
-      <select  v-model="startYear">
+      <!-- <select  v-model="startYear">
         <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
       </select>년 
       <select   v-model="startMonth" >
         <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
       </select>월 
-      <input type="number"    v-model="startDay"   />일  ~  
+      <input type="number"    v-model="startDay"   />일   -->
 
-      <select   v-model="endYear"> 
+
+      <el-date-picker 
+        v-model="displayTime"
+        type="datetime" format="yyyy-MM-dd HH:mm:ss" 
+        value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
+        placeholder="Select date and time"   
+        @change="inputPickStartDateTime"
+      />
+      
+      ~  
+
+      <!-- <select   v-model="endYear"> 
         <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
       </select>년 
       <select   v-model="endMonth" >
         <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
       </select>월 
-      <input type="number"    v-model="endDay"    />일        
+      <input type="number"    v-model="endDay"    />일         -->
+
+
+      <el-date-picker 
+        v-model="displayTime"
+        type="datetime" format="yyyy-MM-dd HH:mm:ss" 
+        value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
+        placeholder="Select date and time"   
+        @change="inputPickStartDateTime"
+      />
+
 
       <button   type="button"    style="max-width: 1px;     visibility: hidden;" >  a  </button>
 
