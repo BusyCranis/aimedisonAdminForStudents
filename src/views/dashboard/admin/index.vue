@@ -8,15 +8,16 @@
       <line-chart :chart-data="lineChartData" />
     </el-row> -->
 
-    <!-- <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> -->
+    <!-- <br /><br /><br /><br /><br /><br /><br /><br /> -->
+    <br /><br /><br /><br />
 
 
 
 
 
 
-    <el-select v-model="listQuery.type" placeholder="Type" clearable class="filter-item" style="width: 130px">
-      <el-option v-for="item in calendarTypeOptions" :key="item.key" :label="item.display_name+'('+item.key+')'" :value="item.key" />
+    <el-select  placeholder="Type" clearable class="filter-item" style="width: 130px">
+      <el-option  />
     </el-select>
 
 
