@@ -1045,9 +1045,6 @@ export default {
       this.startTCmonth = Number(unitDateTimeArray[1]);
       this.startTCday = Number(unitDateTimeArray[2]);
 
-      // endTCyear: 0,
-      // endTCmonth: 0,
-      // endTCday: 0,
     },
 
 
@@ -1063,9 +1060,6 @@ export default {
       this.endTCmonth = Number(unitDateTimeArray[1]);
       this.endTCday = Number(unitDateTimeArray[2]);
 
-      // endTCyear: 0,
-      // endTCmonth: 0,
-      // endTCday: 0,
     },
 
 
