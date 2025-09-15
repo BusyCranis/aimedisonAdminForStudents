@@ -18,13 +18,13 @@
 
 
     
-    <el-date-picker 
+    <!-- <el-date-picker 
       v-model="displayTime"
       type="datetime" format="yyyy-MM-dd HH:mm:ss" 
       value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
       placeholder="Select date and time"   
       @change="inputPickStartDateTime"
-    />
+    /> -->
     
 
     <!-- displayEndTime -->
@@ -47,9 +47,13 @@
       <input type="number"    v-model="startTCday"   />일   -->
 
 
-
-
-      
+      <el-date-picker 
+        v-model="displayTime"
+        type="datetime" format="yyyy-MM-dd HH:mm:ss" 
+        value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
+        placeholder="Select date and time"   
+        @change="inputPickStartDateTime"
+      />
       
       ~  
 
