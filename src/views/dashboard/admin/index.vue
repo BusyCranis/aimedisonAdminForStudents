@@ -30,7 +30,7 @@
       placeholder="Select date and time"   
 
 
-      @change="inputPickDateTime"
+      @change="inputPickStartDateTime"
     
     
     
@@ -991,12 +991,15 @@ export default {
 
 
 
-    async inputPickDateTime() {
+    async inputPickStartDateTime() {
       await this.$nextTick();
 
       console.log(this.displayTime);
+      const unitDateTimeArray = this.displayTime.split("구분");
 
 
+      
+      console.log(unitDateTimeArray);
 
 
 
