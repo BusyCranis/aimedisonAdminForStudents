@@ -998,8 +998,16 @@ export default {
       const unitDateTimeArray = this.displayTime.split("구분");
 
 
-      
       console.log(unitDateTimeArray);
+      this.startTCyear = Number(unitDateTimeArray[0]);
+      this.startTCmonth = Number(unitDateTimeArray[1]);
+      this.startTCday = Number(unitDateTimeArray[2]);
+
+
+
+      // endTCyear: 0,
+      // endTCmonth: 0,
+      // endTCday: 0,
 
 
 
