@@ -19,44 +19,39 @@
 
     
     <el-date-picker 
-    
       v-model="displayTime"
-    
-    
       type="datetime" format="yyyy-MM-dd HH:mm:ss" 
-      
       value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
-      
       placeholder="Select date and time"   
-
-
       @change="inputPickStartDateTime"
-    
-    
-    
-    
     />
     
 
     <!-- displayEndTime -->
 
 
-    
+
 
 
 
     <el-row :gutter="32">
 
-
       일별 사용량(글자 수) 집계 <br>
 
-      <select  v-model="startTCyear">
+      <!-- <select  v-model="startTCyear">
         <option   v-for="item in yearTCvalue"   :value="item"> {{ item }} </option>  
       </select>년 
       <select   v-model="startTCmonth" >
         <option   v-for="item in monthTCvalue"    :value="item"  > {{ item }} </option>
       </select>월 
-      <input type="number"    v-model="startTCday"   />일  ~  
+      <input type="number"    v-model="startTCday"   />일   -->
+
+
+
+
+      
+      
+      ~  
 
       <select   v-model="endTCyear"> 
         <option   v-for="item in yearTCvalue"   :value="item"> {{ item }} </option>  
