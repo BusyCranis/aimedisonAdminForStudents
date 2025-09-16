@@ -58,10 +58,11 @@
           </el-col>
         </el-row> -->
 
-        <el-form-item style="margin-bottom: 0px;"    label-width="70px"    label="인사말:      ">
+        <el-form-item style="margin-bottom: 0px;    max-width: 325px;"    label-width="70px"    label="인사말:      "
+        >
           <el-input v-model="postForm.greeting" :rows="1" type="textarea"   
             maxLength="15"
-            class="article-textarea" autosize placeholder="Please enter the content" 
+            class="article-textarea" autosize placeholder="" 
           />
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
         </el-form-item>
@@ -114,7 +115,7 @@
         <el-form-item style="margin-bottom: 0px;" label-width="70px" label="챗봇 제목:">
           <el-input v-model="postForm.uiConfigOption.shopAppTitle" :rows="1" type="textarea" 
             maxLength="15"
-            class="article-textarea" autosize placeholder="Please enter the content" 
+            class="article-textarea" autosize placeholder="" 
           />
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
         </el-form-item>
