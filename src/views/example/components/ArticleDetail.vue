@@ -295,6 +295,7 @@ export default {
     await this.getKeywordAppInfo()
 
 
+    this.displayIdKeyword = this.$store.state.aimedison.keywordShopAimedison[0].keywordId;
     this.displayKeyword = this.$store.state.aimedison.keywordShopAimedison[0].value;
 
 
