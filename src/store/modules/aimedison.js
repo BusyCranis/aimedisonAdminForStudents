@@ -46,6 +46,11 @@ const mutations = {
 
     console.log(sameIndex);
 
+
+
+
+    
+
     
   },
 

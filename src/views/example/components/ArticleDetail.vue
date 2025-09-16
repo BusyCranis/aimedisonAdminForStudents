@@ -67,7 +67,7 @@
           <el-input v-model="targetKeyword" :rows="1" type="textarea" class="article-textarea" autosize placeholder="Please enter the content" />
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
 
-          <el-button   type="button"    @click="changeTargetKeyword(displayIdKeyword)"    style="background-color: skyblue;    color: black;    padding: 5px;"  >추가</el-button>
+          <el-button   type="button"    @click="changeTargetKeyword()"    style="background-color: skyblue;    color: black;    padding: 5px;"  >추가</el-button>
 
         </el-form-item>
 
@@ -496,7 +496,15 @@ export default {
 
 
     changeTargetKeyword(sameId) {
-      this.$store.commit("aimedison/changeKeywordShopAimedison", sameId);
+
+      this.displayIdKeyword
+      this.displayKeyword
+
+
+      this.$store.commit("aimedison/changeKeywordShopAimedison", {
+        keywordId: this.displayIdKeyword,
+        
+      });
 
 
 
