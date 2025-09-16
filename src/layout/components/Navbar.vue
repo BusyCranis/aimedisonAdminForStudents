@@ -5,13 +5,13 @@
     <breadcrumb id="breadcrumb-container" class="breadcrumb-container" />
 
 
-    <!-- <div class="right-menu">
+    <div class="right-menu">
 
       <img      />
 
 
 
-    </div> -->
+    </div>
 
     
   </div>
@@ -34,6 +34,12 @@ export default {
     Screenfull,
     SizeSelect,
     Search
+  },
+  data() {
+    return {
+      primeImagePath: "@/assets/aimedison.png"
+
+    }
   },
   computed: {
     ...mapGetters([
