@@ -112,7 +112,7 @@
         <br>
         <br>
 
-        <el-form-item style="margin-bottom: 0px;" label-width="70px" label="챗봇 제목:">
+        <el-form-item style="margin-bottom: 0px;    max-width: 325px;" label-width="70px" label="챗봇 제목:">
           <el-input v-model="postForm.uiConfigOption.shopAppTitle" :rows="1" type="textarea" 
             maxLength="15"
             class="article-textarea" autosize placeholder="" 
