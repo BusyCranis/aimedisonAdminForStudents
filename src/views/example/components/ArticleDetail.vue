@@ -83,7 +83,7 @@
 
         <!-- {{ $store.state.aimedison.keywordShopAimedison[0].value }} -->
 
-        {{ displayKeyword }}
+        <!-- {{ displayKeyword }} -->
 
 
         <!-- <div    v-for="item in postForm.appUseFor.appEventKeywordList"      >
