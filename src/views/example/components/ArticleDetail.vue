@@ -466,6 +466,13 @@ export default {
           appUseFor: keywordAppUseFor,
           uiConfigOption: keywordAppUiConfigOption
         })
+
+
+        await this.$nextTick();
+
+        this.displayIdKeyword = this.$store.state.aimedison.keywordShopAimedison[0].keywordId;
+        this.displayKeyword = this.$store.state.aimedison.keywordShopAimedison[0].value;
+
       }
 
 
@@ -495,7 +502,7 @@ export default {
     },
 
 
-    changeTargetKeyword() {
+    async changeTargetKeyword() {
       console.log("changeKeywordShopAimedison 뮤테이션...");
 
       this.$store.commit("aimedison/changeKeywordShopAimedison", {
@@ -503,6 +510,15 @@ export default {
         value: this.targetKeyword
       });
 
+
+
+      await this.$nextTick();
+
+
+
+
+      this.displayIdKeyword = this.$store.state.aimedison.keywordShopAimedison[0].keywordId;
+      this.displayKeyword = this.$store.state.aimedison.keywordShopAimedison[0].value;
     },
 
 
