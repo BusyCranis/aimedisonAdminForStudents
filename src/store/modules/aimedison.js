@@ -43,9 +43,9 @@ const mutations = {
     console.log(payload);
     console.log(payload.keywordId);
     console.log(payload.value);
-    const sameIndex = state.keywordShopAimedison.findIndex(item => item.keywordId === payload.keywordId)[0];
+    const sameIndex = state.keywordShopAimedison.findIndex(item => item.keywordId === payload.keywordId);
 
-    
+
 
     console.log(sameIndex);
     state.keywordShopAimedison[sameIndex].value = payload.value;
