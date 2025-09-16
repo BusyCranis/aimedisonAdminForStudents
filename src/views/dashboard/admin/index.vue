@@ -45,7 +45,7 @@
         v-model="displayTime"
         type="datetime" format="yyyy-MM-dd HH:mm:ss" 
         value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
-        placeholder="Select date and time"   
+        placeholder="날짜 선택"   
         @change="inputPickStartDateTime"
       />
       
@@ -64,7 +64,7 @@
         v-model="displayEndTime"
         type="datetime" format="yyyy-MM-dd HH:mm:ss" 
         value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
-        placeholder="Select date and time"   
+        placeholder="날짜 선택"   
         @change="inputPickEndDateTime"
       />
 
@@ -108,7 +108,7 @@
         v-model="displaySomeTime"
         type="datetime" format="yyyy-MM-dd HH:mm:ss" 
         value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
-        placeholder="Select date and time"   
+        placeholder="날짜 선택"   
         @change="inputPickSomeStartDateTime"
       />
       
@@ -127,7 +127,7 @@
         v-model="displaySomeEndTime"
         type="datetime" format="yyyy-MM-dd HH:mm:ss" 
         value-format="yyyy구분MM구분dd구분HH구분mm구분ss"
-        placeholder="Select date and time"   
+        placeholder="날짜 선택"   
         @change="inputPickSomeEndDateTime"
       />
 
