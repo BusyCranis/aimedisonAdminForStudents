@@ -496,16 +496,12 @@ export default {
 
 
     changeTargetKeyword() {
-
+      console.log("changeKeywordShopAimedison 뮤테이션...");
 
       this.$store.commit("aimedison/changeKeywordShopAimedison", {
         keywordId: this.displayIdKeyword,
         value: this.targetKeyword
       });
-
-
-
-    
 
     },
 
