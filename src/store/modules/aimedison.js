@@ -41,7 +41,7 @@ const mutations = {
 
   changeKeywordShopAimedison: (state, payload) => {
 
-    state.keywordShopAimedison.filter(item => item.keywordId !== payload)[0];
+      state.keywordShopAimedison.findIndex(item => item.keywordId === payload)[0];
 
 
     // state.keywordShopAimedison = state.keywordShopAimedison.filter(item => item.keywordId !== payload);
