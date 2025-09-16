@@ -469,11 +469,6 @@ export default {
         keywordId: "eventkeyword" + Date.now()
       });
 
-
-
-
-     
-
       setTimeout(() => {
         console.log(window.document.querySelectorAll(".cell"))
 
@@ -488,6 +483,21 @@ export default {
       }, 5);
 
     },
+
+
+    changeTargetKeyword(sameId) {
+      this.$store.commit("aimedison/changeKeywordShopAimedison", sameId);
+
+
+
+      // this.$store.commit("aimedison/addKeywordShopAimedison", {
+      //   value: this.targetKeyword,
+      //   keywordId: "eventkeyword" + Date.now()
+      // });
+
+    },
+
+
 
 
 
