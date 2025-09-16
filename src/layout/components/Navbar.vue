@@ -25,6 +25,7 @@ import ErrorLog from '@/components/ErrorLog'
 import Screenfull from '@/components/Screenfull'
 import SizeSelect from '@/components/SizeSelect'
 import Search from '@/components/HeaderSearch'
+import primeImagePath from "@/assets/aimedison.png"
 
 export default {
   components: {
@@ -37,7 +38,7 @@ export default {
   },
   data() {
     return {
-      primeImagePath: "@/assets/aimedison.png"
+      primeImagePath: primeImagePath
 
     }
   },
