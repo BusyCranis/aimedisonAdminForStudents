@@ -59,7 +59,10 @@
         </el-row> -->
 
         <el-form-item style="margin-bottom: 0px;"    label-width="70px"    label="인사말:      ">
-          <el-input v-model="postForm.greeting" :rows="1" type="textarea" class="article-textarea" autosize placeholder="Please enter the content" />
+          <el-input v-model="postForm.greeting" :rows="1" type="textarea"   
+            maxLength="15"
+            class="article-textarea" autosize placeholder="Please enter the content" 
+          />
           <!-- <span v-show="contentShortLength" class="word-counter">{{ contentShortLength }}words</span> -->
         </el-form-item>
 
