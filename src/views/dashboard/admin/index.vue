@@ -1128,7 +1128,7 @@ export default {
      
 
       for(let i = 0; i < mijh87shh.length; i++) {
-        // const row = headers.map(header => `"${obj[header]}"`);
+        console.log(mijh87shh[i]);
         const row = [ mijh87shh[i].memberId, mijh87shh[i].keywordHistoryArray ];
         csvRows.push(row.join(','));
       }
