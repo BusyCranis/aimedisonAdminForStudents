@@ -1135,6 +1135,42 @@ export default {
 
       return csvRows.join('\n');
     },
+
+
+
+    async downloadAllRecordAsExcelFile() {
+      // "/keyword/record/excel"
+      const objArray = await axios.post("http://175.119.224.227:5003/keyword/record/excel", {
+        shopId: keyForSaveAuthTokenInLocal
+      })
+
+
+
+      console.log(objArray.data);
+      const csvString = objectArrayToCSV(objArray.data);
+      const utf8Bom = '\uFEFF';
+
+
+      // CSV 문자열을 Blob 객체로 변환
+      console.log(csvString);
+      const blob = new Blob([utf8Bom + csvString], { type: 'text/csv;charset=utf-8;' });
+
+      // Blob 객체를 가리키는 URL 생성
+      const url = URL.createObjectURL(blob);
+
+      // 임시 링크 생성
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = "filename.csv";
+
+      // 링크를 클릭하여 파일 다운로드 트리거
+      document.body.appendChild(a);
+      a.click();
+
+      // 클린업
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    },
     
 
 
