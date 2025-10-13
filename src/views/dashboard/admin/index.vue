@@ -199,7 +199,7 @@
 
 
 
-    
+
     <button> 엑셀 다운로드 </button>
 
 
@@ -1108,6 +1108,34 @@ export default {
       this.endDay = Number(unitDateTimeArray[2]);
 
     },
+
+
+
+    objectArrayToCSV(mijh87shh) {
+      if (mijh87shh.length === 0) {
+        return '';
+      }
+
+      // const headers = Object.keys(mijh87shh[0]);
+      const headers = [ "사용자아이디", "대화내역" ];
+      const csvRows = [];
+
+      // 헤더를 CSV의 첫 줄로 추가
+      csvRows.push(headers.join(','));
+
+     
+
+      for(let i = 0; i < mijh87shh.length; i++) {
+        // const row = headers.map(header => `"${obj[header]}"`);
+        const row = [ mijh87shh[i].memberId, mijh87shh[i].keywordHistoryArray ];
+        csvRows.push(row.join(','));
+      }
+
+
+
+      return csvRows.join('\n');
+    },
+    
 
 
 
