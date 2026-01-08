@@ -296,19 +296,11 @@ export default {
     // console.log(this.$store.state);
 
     console.log(this.$store.state.aimedison);
-    // aimedisonKeywordUserList
 
     console.log(this.$store.state.aimedison.aimedisonKeywordUserList);
-
-    // this.yearValue = [2024, 2025]
-    // this.monthValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   },
 
   async mounted() {
-    // this.yearValue = [2024, 2025]
-    // window["cafe24aimedisonkeywordappshopid"]
-    // window.cafe24aimedisonkeywordappshopid
-
     console.log(this.startYear);
 
     this.dailyStatResponse = await axios.post(
@@ -376,16 +368,11 @@ export default {
 
       console.log(dailyValueArray);
 
-      // window["dailyChatKeyNamesForAggr"] = monthlyKeyNamesForAggr;
-
-      // window["aimedisonDailyChatValueDataArray"] = dailyValueArray;
-
       this.chart.setOption({
         tooltip: {
           trigger: "axis",
           axisPointer: {
-            // 坐标轴指示器，坐标轴触发有效
-            type: "shadow", // 默认为直线，可选为：'line' | 'shadow'
+            type: "shadow",
           },
         },
         grid: {
@@ -423,21 +410,6 @@ export default {
             data: dailyValueArray,
             animationDuration,
           },
-          // {
-          //   name: 'pageB',
-          //   type: 'bar',
-          //   stack: 'vistors',
-          //   barWidth: '60%',
-          //   data: [80, 52, 200, 334, 390, 330, 220],
-          //   animationDuration
-          // }, {
-          //   name: 'pageC',
-          //   type: 'bar',
-          //   stack: 'vistors',
-          //   barWidth: '60%',
-          //   data: [30, 52, 200, 334, 390, 330, 220],
-          //   animationDuration
-          // }
         ],
       });
     },
@@ -518,8 +490,7 @@ export default {
           tooltip: {
             trigger: "axis",
             axisPointer: {
-              // 坐标轴指示器，坐标轴触发有效
-              type: "shadow", // 默认为直线，可选为：'line' | 'shadow'
+              type: "shadow",
             },
           },
           grid: {
@@ -557,21 +528,6 @@ export default {
               data: dailyValueArray,
               animationDuration,
             },
-            // {
-            //   name: 'pageB',
-            //   type: 'bar',
-            //   stack: 'vistors',
-            //   barWidth: '60%',
-            //   data: [80, 52, 200, 334, 390, 330, 220],
-            //   animationDuration
-            // }, {
-            //   name: 'pageC',
-            //   type: 'bar',
-            //   stack: 'vistors',
-            //   barWidth: '60%',
-            //   data: [30, 52, 200, 334, 390, 330, 220],
-            //   animationDuration
-            // }
           ],
         });
       }
@@ -596,8 +552,7 @@ export default {
         tooltip: {
           trigger: "axis",
           axisPointer: {
-            // 坐标轴指示器，坐标轴触发有效
-            type: "shadow", // 默认为直线，可选为：'line' | 'shadow'
+            type: "shadow",
           },
         },
         grid: {
@@ -631,25 +586,10 @@ export default {
             type: "bar",
             stack: "vistors",
             barWidth: "60%",
-            // data: [79, 52, 200, 134, 190, 130],
+
             data: dailyValueArray,
             animationDuration,
           },
-          // {
-          //   name: 'pageB',
-          //   type: 'bar',
-          //   stack: 'vistors',
-          //   barWidth: '60%',
-          //   data: [80, 52, 200, 334, 390, 330, 220],
-          //   animationDuration
-          // }, {
-          //   name: 'pageC',
-          //   type: 'bar',
-          //   stack: 'vistors',
-          //   barWidth: '60%',
-          //   data: [30, 52, 200, 334, 390, 330, 220],
-          //   animationDuration
-          // }
         ],
       });
     },
@@ -704,8 +644,7 @@ export default {
         tooltip: {
           trigger: "axis",
           axisPointer: {
-            // 坐标轴指示器，坐标轴触发有效
-            type: "shadow", // 默认为直线，可选为：'line' | 'shadow'
+            type: "shadow",
           },
         },
         grid: {
@@ -743,21 +682,6 @@ export default {
             data: dailyValueArray,
             animationDuration,
           },
-          // {
-          //   name: 'pageB',
-          //   type: 'bar',
-          //   stack: 'vistors',
-          //   barWidth: '60%',
-          //   data: [80, 52, 200, 334, 390, 330, 220],
-          //   animationDuration
-          // }, {
-          //   name: 'pageC',
-          //   type: 'bar',
-          //   stack: 'vistors',
-          //   barWidth: '60%',
-          //   data: [30, 52, 200, 334, 390, 330, 220],
-          //   animationDuration
-          // }
         ],
       });
     },
@@ -855,8 +779,7 @@ export default {
           tooltip: {
             trigger: "axis",
             axisPointer: {
-              // 坐标轴指示器，坐标轴触发有效
-              type: "shadow", // 默认为直线，可选为：'line' | 'shadow'
+              type: "shadow",
             },
           },
           grid: {
@@ -957,8 +880,7 @@ export default {
         tooltip: {
           trigger: "axis",
           axisPointer: {
-            // 坐标轴指示器，坐标轴触发有效
-            type: "shadow", // 默认为直线，可选为：'line' | 'shadow'
+            type: "shadow",
           },
         },
         grid: {
