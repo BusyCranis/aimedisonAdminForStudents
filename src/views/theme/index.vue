@@ -2,9 +2,7 @@
   <div class="app-container">
     <el-card class="box-card">
       <div slot="header">
-        <a class="link-type link-title" target="_blank" >
-          앱 설치 관리
-        </a>
+        <a class="link-type link-title" target="_blank"> 앱 설치 관리 </a>
       </div>
       <div class="box-item">
         <!-- <span class="field-label">Change Theme : </span> -->
@@ -16,26 +14,35 @@
           Success
         </el-button> -->
 
-        <el-button type="primary"      v-if="isAppInstalledFromServer === false"     @click="requestInsertScriptInService">
+        <el-button
+          type="primary"
+          v-if="isAppInstalledFromServer === false"
+          @click="requestInsertScriptInService"
+        >
           설치
         </el-button>
-        <el-button type="primary"      v-else-if="isAppInstalledFromServer === true && isAppDisplayingFromServer === false"      @click="SetReInstallAppService">
+        <el-button
+          type="primary"
+          v-else-if="
+            isAppInstalledFromServer === true &&
+            isAppDisplayingFromServer === false
+          "
+          @click="SetReInstallAppService"
+        >
           재설치
         </el-button>
-        <el-button type="primary"       v-else-if="isAppDisplayingFromServer === true"      @click="deactivateAppService">
+        <el-button
+          type="primary"
+          v-else-if="isAppDisplayingFromServer === true"
+          @click="deactivateAppService"
+        >
           설치 해제
         </el-button>
 
-
         <!-- <el-switch v-model="theme" /> -->
-        <aside style="margin-top:15px;">
-          이 앱에 대한 설명
-        </aside>
+        <aside style="margin-top: 15px">이 앱에 대한 설명</aside>
       </div>
     </el-card>
-
-
-
 
     <!-- <div class="block">
       <el-button type="primary">
@@ -91,180 +98,126 @@
     <div class="block">
       <el-slider v-model="slideValue" />
     </div> -->
-
-
-
-
-
   </div>
 </template>
 
 <script>
-import axios from 'axios'
-import { toggleClass } from '@/utils'
-import '@/assets/custom-theme/index.css' // the theme changed version element-ui css
+import axios from "axios";
+import { toggleClass } from "@/utils";
+import "@/assets/custom-theme/index.css"; // the theme changed version element-ui css
 
 export default {
-  name: 'Theme',
+  name: "Theme",
   data() {
     return {
       theme: false,
       tags: [
-        { name: 'Tag One', type: '' },
-        { name: 'Tag Two', type: 'info' },
-        { name: 'Tag Three', type: 'success' },
-        { name: 'Tag Four', type: 'warning' },
-        { name: 'Tag Five', type: 'danger' }
+        { name: "Tag One", type: "" },
+        { name: "Tag Two", type: "info" },
+        { name: "Tag Three", type: "success" },
+        { name: "Tag Four", type: "warning" },
+        { name: "Tag Five", type: "danger" },
       ],
       slideValue: 50,
       radio: 3,
 
       isAppInstalledFromServer: true,
       isAppDisplayingFromServer: true,
-
-
-
-
-
-
-    }
+    };
   },
   watch: {
     theme() {
-      toggleClass(document.body, 'custom-theme')
-    }
+      toggleClass(document.body, "custom-theme");
+    },
   },
-
-
 
   async mounted() {
-    await this.bringKeywordAppInstallStatus()
-
-
-
+    await this.bringKeywordAppInstallStatus();
   },
 
-
-
   methods: {
-
     async bringKeywordAppInstallStatus() {
-      let resFromKeywordAppServer = await axios.post("http://175.119.224.227:7337/app/checkshopexist", {
-        shopId: window.cafe24aimedisonkeywordappshopid
-      })
-
-
-
-
+      let resFromKeywordAppServer = await axios.post(
+        "http://175.119.224.227:7337/app/checkshopexist",
+        {
+          shopId: window.cafe24aimedisonkeywordappshopid,
+        }
+      );
 
       // console.log(resFromKeywordAppServer);
       console.log(resFromKeywordAppServer.data);
       console.log(resFromKeywordAppServer.data.isAppInstalled);
       console.log(resFromKeywordAppServer.data.isAppDisplaying);
 
-      this.isAppInstalledFromServer = resFromKeywordAppServer.data.isAppInstalled;
-      this.isAppDisplayingFromServer = resFromKeywordAppServer.data.isAppDisplaying;
-
-
+      this.isAppInstalledFromServer =
+        resFromKeywordAppServer.data.isAppInstalled;
+      this.isAppDisplayingFromServer =
+        resFromKeywordAppServer.data.isAppDisplaying;
     },
 
     async requestInsertScriptInService() {
       const confirmPrompt = "정말로 이 앱을 설치하시겠습니까?";
 
+      if (this.useConfirmHandler(confirmPrompt) === true) {
+        let responseFromAppScript = await axios.post(
+          "http://175.119.224.227:7337/app/insertscript",
+          {
+            urlSearchKey: window.cafe24aimedisonkeywordappshopid,
+          }
+        );
 
-
-      if(this.useConfirmHandler(confirmPrompt) === true) {
-        let responseFromAppScript = await axios.post("http://175.119.224.227:7337/app/insertscript", {
-          urlSearchKey: window.cafe24aimedisonkeywordappshopid
-        });
-        
-
-
-        
         // console.log(responseFromAppScript);
         console.log(responseFromAppScript.data);
 
         window.location.href = "";
-
       }
-
     },
-
 
     async deactivateAppService() {
       const confirmPrompt = "정말로 이 앱의 설치를 해제하시겠습니까?";
 
-
-      
-      if(this.useConfirmHandler(confirmPrompt) === true) {
-        let resultFromDeact = await axios.post("http://175.119.224.227:7337/app/deactivate", {
-          shopId: window.cafe24aimedisonkeywordappshopid
-        });
-        
-
+      if (this.useConfirmHandler(confirmPrompt) === true) {
+        let resultFromDeact = await axios.post(
+          "http://175.119.224.227:7337/app/deactivate",
+          {
+            shopId: window.cafe24aimedisonkeywordappshopid,
+          }
+        );
 
         console.log(resultFromDeact);
 
         window.location.href = "";
-
       }
-
     },
 
     async SetReInstallAppService() {
       const confirmPrompt = "정말로 이 앱을 재설치하시겠습니까?";
 
-      
-      
-      if(this.useConfirmHandler(confirmPrompt) === true) {
-        let resultFromDeact = await axios.post("http://175.119.224.227:7337/app/reinstallapp", {
-          shopId: window.cafe24aimedisonkeywordappshopid
-        });
-        
+      if (this.useConfirmHandler(confirmPrompt) === true) {
+        let resultFromDeact = await axios.post(
+          "http://175.119.224.227:7337/app/reinstallapp",
+          {
+            shopId: window.cafe24aimedisonkeywordappshopid,
+          }
+        );
 
-        
         console.log(resultFromDeact);
 
         window.location.href = "";
-
       }
-
     },
-
-
-
-
-
 
     useConfirmHandler(confirmMessage) {
       const resultByUser = window.confirm(confirmMessage);
 
-
-      
       return resultByUser;
-
     },
-
-
-
-
-
-
-
-
-
-
-
-
   },
-
-
-
-}
+};
 </script>
 
 <style scoped>
-.field-label{
+.field-label {
   vertical-align: middle;
 }
 .box-card {

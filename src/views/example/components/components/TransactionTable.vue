@@ -9,10 +9,7 @@
       label="키워드 목록"
       min-width="150"
     >
-      <template
-        style="padding-right: 0px; padding-left: 0px"
-        slot-scope="scope"
-      >
+      <template slot-scope="scope">
         {{ scope.row.value }}
       </template>
     </el-table-column>
