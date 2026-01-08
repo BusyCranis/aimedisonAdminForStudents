@@ -5,11 +5,6 @@
 
     <br /><br />
 
-    <!-- <button >
-    </button> -->
-
-    <!-- displayEndTime -->
-
     <el-row :gutter="32">
       일별 사용량(글자 수) 집계 <br />
 
@@ -23,14 +18,6 @@
       />
 
       ~
-
-      <!-- <select   v-model="endTCyear"> 
-        <option   v-for="item in yearTCvalue"   :value="item"> {{ item }} </option>  
-      </select>년 
-      <select   v-model="endTCmonth" >
-        <option   v-for="item in monthTCvalue"    :value="item"  > {{ item }} </option>
-      </select>월 
-      <input type="number"    v-model="endTCday"    />일         -->
 
       <el-date-picker
         v-model="displayEndTime"
@@ -84,14 +71,6 @@
 
       일별 대화 수 집계 <br />
 
-      <!-- <select  v-model="startYear">
-        <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
-      </select>년 
-      <select   v-model="startMonth" >
-        <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
-      </select>월 
-      <input type="number"    v-model="startDay"   />일   -->
-
       <el-date-picker
         v-model="displaySomeTime"
         type="datetime"
@@ -102,14 +81,6 @@
       />
 
       ~
-
-      <!-- <select   v-model="endYear"> 
-        <option   v-for="item in yearValue"   :value="item"> {{ item }} </option>  
-      </select>년 
-      <select   v-model="endMonth" >
-        <option   v-for="item in monthValue"    :value="item"  > {{ item }} </option>
-      </select>월 
-      <input type="number"    v-model="endDay"    />일         -->
 
       <el-date-picker
         v-model="displaySomeEndTime"
@@ -158,11 +129,6 @@
           />
         </div>
       </el-col>
-
-      <!-- <el-form-item>
-        <el-input    type="textarea"    class="article-textarea">
-        </el-input>
-      </el-form-item> -->
     </el-row>
 
     <el-form class="form-container">
@@ -217,13 +183,6 @@
       >
         <transaction-table />
       </el-col>
-
-      <!-- <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 6}" :xl="{span: 6}" style="margin-bottom:30px;">
-        <todo-list />
-      </el-col>
-      <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 6}" :xl="{span: 6}" style="margin-bottom:30px;">
-        <box-card />
-      </el-col> -->
 
       <el-col
         :xs="{ span: 24 }"
