@@ -112,7 +112,7 @@ export default {
       console.log(selectedUser)
 
       if(selectedUser.successHistoryList.length > 0) {
-        let recentSuccessedChatHistory = await axios.post("/find/successedchathistory", {
+        let recentSuccessedChatHistory = await axios.post("http://175.119.224.227:5003/find/successedchathistory", {
           shopId: window.cafe24aimedisonkeywordappshopid,
           userId: userId,
           trialId: selectedUser.successHistoryList[selectedUser.successHistoryList.length - 1].trialIdForEvent
@@ -134,7 +134,7 @@ export default {
 
     
     async findAllChatHistory(userId) {
-      let recentSuccessedChatHistory = await axios.post("/find/allchathistory", {
+      let recentSuccessedChatHistory = await axios.post("http://175.119.224.227:5003/find/allchathistory", {
         shopId: window.cafe24aimedisonkeywordappshopid,
         userId: userId,
       

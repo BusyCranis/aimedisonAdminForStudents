@@ -1065,7 +1065,7 @@ export default {
 
     async submitUserAccountNameSearch() {
       console.log(this.searchUserAccountName);
-      let userSearchResult = await axios.post("/keywordapp/admin/search/user", {
+      let userSearchResult = await axios.post("http://175.119.224.227:5003/keywordapp/admin/search/user", {
         shopId: window.cafe24aimedisonkeywordappshopid,
         searchUserAccountName: this.searchUserAccountName,
       });
@@ -1089,7 +1089,7 @@ export default {
         "님의 참여 횟수를 리셋 하시겠습니까?";
 
       if (this.useConfirmHandler(confirmPrompt) === true) {
-        const resultAfterReset = await axios.post("/resetaftersuccess", {
+        const resultAfterReset = await axios.post("http://175.119.224.227:5003/resetaftersuccess", {
           shopId: window.cafe24aimedisonkeywordappshopid,
           userId: this.$store.state.aimedison.currentSelectedUserId,
         });
@@ -1173,7 +1173,7 @@ export default {
     async downloadAllRecordAsExcelFile() {
       console.log(window.cafe24aimedisonkeywordappshopid);
       // "/keyword/record/excel"
-      const objArray = await axios.post("/keyword/record/excel", {
+      const objArray = await axios.post("http://175.119.224.227:5003/keyword/record/excel", {
         shopId: window.cafe24aimedisonkeywordappshopid,
       });
 
