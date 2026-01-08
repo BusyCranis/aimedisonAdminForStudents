@@ -374,7 +374,7 @@ export default {
   methods: {
     async getKeywordAppInfo() {
       // console.log("getKeywordAppInfo...");
-      let resFromKeywordAppServer = await axios.post("/app/checkshopexist", {
+      let resFromKeywordAppServer = await axios.post("http://175.119.224.227:7337/app/checkshopexist", {
         shopId: window.cafe24aimedisonkeywordappshopid,
       });
 
@@ -530,7 +530,7 @@ export default {
       const confirmPrompt = "정말로 모든 변경 사항을 적용하시겠습니까?";
 
       if (this.useConfirmHandler(confirmPrompt) === true) {
-        await axios.post("/app/changeeachshopconfig", {
+        await axios.post("http://175.119.224.227:7337/app/changeeachshopconfig", {
           shopId: window.cafe24aimedisonkeywordappshopid,
           greeting: this.postForm.greeting,
           appUseFor: keywordAppUseFor,

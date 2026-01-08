@@ -149,7 +149,7 @@ export default {
   methods: {
 
     async bringKeywordAppInstallStatus() {
-      let resFromKeywordAppServer = await axios.post("/app/checkshopexist", {
+      let resFromKeywordAppServer = await axios.post("http://175.119.224.227:7337/app/checkshopexist", {
         shopId: window.cafe24aimedisonkeywordappshopid
       })
 
@@ -174,7 +174,7 @@ export default {
 
 
       if(this.useConfirmHandler(confirmPrompt) === true) {
-        let responseFromAppScript = await axios.post("/app/insertscript", {
+        let responseFromAppScript = await axios.post("http://175.119.224.227:7337/app/insertscript", {
           urlSearchKey: window.cafe24aimedisonkeywordappshopid
         });
         
