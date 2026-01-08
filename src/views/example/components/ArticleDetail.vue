@@ -3,62 +3,7 @@
     <br /><br />
 
     <el-form ref="postForm" :rules="rules" class="form-container">
-      <!-- <sticky :z-index="10" :class-name="'sub-navbar '+postForm.status">
-        <CommentDropdown v-model="postForm.comment_disabled" />
-        <PlatformDropdown v-model="postForm.platforms" />
-        <SourceUrlDropdown v-model="postForm.source_uri" />
-        <el-button v-loading="loading" style="margin-left: 10px;" type="success" @click="submitForm">
-          Publish
-        </el-button>
-        <el-button v-loading="loading" type="warning" @click="draftForm">
-          Draft
-        </el-button>
-      </sticky> -->
-
       <div class="createPost-main-container">
-        <!-- <el-row>
-          <Warning />
-
-          <el-col :span="24">
-            <el-form-item style="margin-bottom: 0px;" prop="title">
-              <MDinput v-model="postForm.title" :maxlength="100" name="name" required>
-                Title
-              </MDinput>
-            </el-form-item>
-
-            <div class="postInfo-container">
-              <el-row>
-                <el-col :span="8">
-                  <el-form-item label-width="60px" label="Author:" class="postInfo-container-item">
-                    <el-select v-model="postForm.author" :remote-method="getRemoteUserList" filterable default-first-option remote placeholder="Search user">
-                      <el-option v-for="(item,index) in userListOptions" :key="item+index" :label="item" :value="item" />
-                    </el-select>
-                  </el-form-item>
-                </el-col>
-
-                <el-col :span="10">
-                  <el-form-item label-width="120px" label="Publish Time:" class="postInfo-container-item">
-                    <el-date-picker v-model="displayTime" type="datetime" format="yyyy-MM-dd HH:mm:ss" placeholder="Select date and time" />
-                  </el-form-item>
-                </el-col>
-
-                <el-col :span="6">
-                  <el-form-item label-width="90px" label="Importance:" class="postInfo-container-item">
-                    <el-rate
-                      v-model="postForm.importance"
-                      :max="3"
-                      :colors="['#99A9BF', '#F7BA2A', '#FF9900']"
-                      :low-threshold="1"
-                      :high-threshold="3"
-                      style="display:inline-block"
-                    />
-                  </el-form-item>
-                </el-col>
-              </el-row>
-            </div>
-          </el-col>
-        </el-row> -->
-
         <el-form-item
           style="margin-bottom: 0px; max-width: 325px"
           label-width="70px"
@@ -98,21 +43,6 @@
             >수정</el-button
           >
         </el-form-item>
-
-        <!-- <el-row :gutter="8">
-          <el-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 8}" :lg="{span: 6}" :xl="{span: 4}" style="padding-left:50px;  padding-right:0px; margin-bottom:0px;">
-            <TransactionTable />
-          </el-col>
-        </el-row> -->
-
-        <!-- {{ $store.state.aimedison.keywordShopAimedison[0].value }} -->
-
-        <!-- {{ displayKeyword }} -->
-
-        <!-- <div    v-for="item in postForm.appUseFor.appEventKeywordList"      >
-          {{ item.value }}    
-          <button     type="button"      @click="removeTargetKeyword(item.keywordId)">삭제</button>
-        </div> -->
 
         <br />
         <br />
@@ -188,14 +118,6 @@
           v-model="postForm.uiConfigOption.shopAppColors.answerMessageBoxColor"
         />
         <span style="line-height: 35px"><br /></span>
-
-        <!-- <el-form-item prop="content" style="margin-bottom: 0px;">
-          <Tinymce ref="editor" v-model="postForm.content" :height="400" />
-        </el-form-item> -->
-
-        <!-- <el-form-item prop="image_uri" style="margin-bottom: 0px;">
-          <Upload v-model="postForm.image_uri" />
-        </el-form-item> -->
       </div>
 
       <br />
@@ -326,18 +248,6 @@ export default {
     contentShortLength() {
       // return this.postForm.content_short.length
     },
-    // displayTime: {
-    //   // set and get is useful when the data
-    //   // returned by the back end api is different from the front end
-    //   // back end return => "2013-06-25 06:59:25"
-    //   // front end need timestamp => 1372114765000
-    //   get() {
-    //     return (+new Date(this.postForm.display_time))
-    //   },
-    //   set(val) {
-    //     this.postForm.display_time = new Date(val)
-    //   }
-    // }
   },
   created() {
     if (this.isEdit) {
@@ -345,9 +255,6 @@ export default {
       // this.fetchData(id)
     }
 
-    // Why need to make a copy of this.$route here?
-    // Because if you enter this page and quickly switch tag, may be in the execution of the setTagsViewTitle function, this.$route is no longer pointing to the current page
-    // https://github.com/PanJiaChen/vue-element-admin/issues/1221
     this.tempRoute = Object.assign({}, this.$route);
   },
 
@@ -374,9 +281,12 @@ export default {
   methods: {
     async getKeywordAppInfo() {
       // console.log("getKeywordAppInfo...");
-      let resFromKeywordAppServer = await axios.post("http://175.119.224.227:7337/app/checkshopexist", {
-        shopId: window.cafe24aimedisonkeywordappshopid,
-      });
+      let resFromKeywordAppServer = await axios.post(
+        "http://175.119.224.227:7337/app/checkshopexist",
+        {
+          shopId: window.cafe24aimedisonkeywordappshopid,
+        }
+      );
 
       console.log(resFromKeywordAppServer);
       console.log(resFromKeywordAppServer.data);
@@ -530,12 +440,15 @@ export default {
       const confirmPrompt = "정말로 모든 변경 사항을 적용하시겠습니까?";
 
       if (this.useConfirmHandler(confirmPrompt) === true) {
-        await axios.post("http://175.119.224.227:7337/app/changeeachshopconfig", {
-          shopId: window.cafe24aimedisonkeywordappshopid,
-          greeting: this.postForm.greeting,
-          appUseFor: keywordAppUseFor,
-          uiConfigOption: keywordAppUiConfigOption,
-        });
+        await axios.post(
+          "http://175.119.224.227:7337/app/changeeachshopconfig",
+          {
+            shopId: window.cafe24aimedisonkeywordappshopid,
+            greeting: this.postForm.greeting,
+            appUseFor: keywordAppUseFor,
+            uiConfigOption: keywordAppUiConfigOption,
+          }
+        );
 
         await this.$nextTick();
 
