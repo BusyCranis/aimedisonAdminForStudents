@@ -1,13 +1,5 @@
 <template>
   <div class="dashboard-editor-container">
-    <!-- <github-corner class="github-corner" /> -->
-
-    <!-- <panel-group @handleSetLineChartData="handleSetLineChartData" /> -->
-
-    <!-- <el-row style="background:#fff;padding:16px 16px 0;margin-bottom:32px;">
-      <line-chart :chart-data="lineChartData" />
-    </el-row> -->
-
     <!-- <br /><br /><br /><br /><br /><br /><br /><br /> -->
     <!-- <br /><br /> -->
 
@@ -20,14 +12,6 @@
 
     <el-row :gutter="32">
       일별 사용량(글자 수) 집계 <br />
-
-      <!-- <select  v-model="startTCyear">
-        <option   v-for="item in yearTCvalue"   :value="item"> {{ item }} </option>  
-      </select>년 
-      <select   v-model="startTCmonth" >
-        <option   v-for="item in monthTCvalue"    :value="item"  > {{ item }} </option>
-      </select>월 
-      <input type="number"    v-model="startTCday"   />일   -->
 
       <el-date-picker
         v-model="displayTime"
@@ -368,9 +352,12 @@ export default {
 
     console.log(this.startYear);
 
-    this.dailyStatResponse = await axios.post("http://175.119.224.227:5003/admin/daily/chatcount", {
-      shopId: window.cafe24aimedisonkeywordappshopid,
-    });
+    this.dailyStatResponse = await axios.post(
+      "http://175.119.224.227:5003/admin/daily/chatcount",
+      {
+        shopId: window.cafe24aimedisonkeywordappshopid,
+      }
+    );
 
     // console.log(this.$el)
 
@@ -538,16 +525,19 @@ export default {
 
         return;
       } else {
-        let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
-          shopId: window.cafe24aimedisonkeywordappshopid,
-          dailyChatStatResponse: this.dailyStatResponse.data,
-          startYear: this.startYear,
-          startMonth: this.startMonth,
-          startDay: this.startDay,
-          endYear: this.endYear,
-          endMonth: this.endMonth,
-          endDay: this.endDay,
-        });
+        let searchResult = await axios.post(
+          "http://175.119.224.227:5003/admin/search/daily/chatcount",
+          {
+            shopId: window.cafe24aimedisonkeywordappshopid,
+            dailyChatStatResponse: this.dailyStatResponse.data,
+            startYear: this.startYear,
+            startMonth: this.startMonth,
+            startDay: this.startDay,
+            endYear: this.endYear,
+            endMonth: this.endMonth,
+            endDay: this.endDay,
+          }
+        );
 
         console.log(searchResult);
         console.log(searchResult.data);
@@ -852,16 +842,19 @@ export default {
 
         return;
       } else {
-        let searchResult = await axios.post("http://175.119.224.227:5003/admin/search/daily/chatcount", {
-          shopId: window.cafe24aimedisonkeywordappshopid,
-          dailyChatStatResponse: this.dailyStatResponse.data,
-          startYear: this.startTCyear,
-          startMonth: this.startTCmonth,
-          startDay: this.startTCday,
-          endYear: this.endTCyear,
-          endMonth: this.endTCmonth,
-          endDay: this.endTCday,
-        });
+        let searchResult = await axios.post(
+          "http://175.119.224.227:5003/admin/search/daily/chatcount",
+          {
+            shopId: window.cafe24aimedisonkeywordappshopid,
+            dailyChatStatResponse: this.dailyStatResponse.data,
+            startYear: this.startTCyear,
+            startMonth: this.startTCmonth,
+            startDay: this.startTCday,
+            endYear: this.endTCyear,
+            endMonth: this.endTCmonth,
+            endDay: this.endTCday,
+          }
+        );
 
         console.log(searchResult);
         console.log(searchResult.data);
@@ -1065,10 +1058,13 @@ export default {
 
     async submitUserAccountNameSearch() {
       console.log(this.searchUserAccountName);
-      let userSearchResult = await axios.post("http://175.119.224.227:5003/keywordapp/admin/search/user", {
-        shopId: window.cafe24aimedisonkeywordappshopid,
-        searchUserAccountName: this.searchUserAccountName,
-      });
+      let userSearchResult = await axios.post(
+        "http://175.119.224.227:5003/keywordapp/admin/search/user",
+        {
+          shopId: window.cafe24aimedisonkeywordappshopid,
+          searchUserAccountName: this.searchUserAccountName,
+        }
+      );
 
       console.log(userSearchResult);
       console.log(userSearchResult.data);
@@ -1089,10 +1085,13 @@ export default {
         "님의 참여 횟수를 리셋 하시겠습니까?";
 
       if (this.useConfirmHandler(confirmPrompt) === true) {
-        const resultAfterReset = await axios.post("http://175.119.224.227:5003/resetaftersuccess", {
-          shopId: window.cafe24aimedisonkeywordappshopid,
-          userId: this.$store.state.aimedison.currentSelectedUserId,
-        });
+        const resultAfterReset = await axios.post(
+          "http://175.119.224.227:5003/resetaftersuccess",
+          {
+            shopId: window.cafe24aimedisonkeywordappshopid,
+            userId: this.$store.state.aimedison.currentSelectedUserId,
+          }
+        );
 
         console.log(resultAfterReset);
         console.log(resultAfterReset.data);
@@ -1173,9 +1172,12 @@ export default {
     async downloadAllRecordAsExcelFile() {
       console.log(window.cafe24aimedisonkeywordappshopid);
       // "/keyword/record/excel"
-      const objArray = await axios.post("http://175.119.224.227:5003/keyword/record/excel", {
-        shopId: window.cafe24aimedisonkeywordappshopid,
-      });
+      const objArray = await axios.post(
+        "http://175.119.224.227:5003/keyword/record/excel",
+        {
+          shopId: window.cafe24aimedisonkeywordappshopid,
+        }
+      );
 
       console.log(objArray.data);
       const csvString = this.objectArrayToCSV(objArray.data);
