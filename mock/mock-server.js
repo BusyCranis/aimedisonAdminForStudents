@@ -46,8 +46,6 @@ const responseFake = (url, type, respond) => {
 };
 
 module.exports = (app) => {
-  // parse app.body
-
   app.use(bodyParser.json());
   app.use(
     bodyParser.urlencoded({
@@ -77,10 +75,8 @@ module.exports = (app) => {
     .on("all", (event, path) => {
       // if (event === 'change' || event === 'add') {
       try {
-        // remove mock routes stack
         app._router.stack.splice(mockStartIndex, mockRoutesLength);
 
-        // clear routes cache
         unregisterRoutes();
 
         const mockRoutes = registerRoutes(app);
