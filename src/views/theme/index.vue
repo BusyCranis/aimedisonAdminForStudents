@@ -197,7 +197,7 @@ export default {
 
       
       if(this.useConfirmHandler(confirmPrompt) === true) {
-        let resultFromDeact = await axios.post("/app/deactivate", {
+        let resultFromDeact = await axios.post("http://175.119.224.227:7337/app/deactivate", {
           shopId: window.cafe24aimedisonkeywordappshopid
         });
         
@@ -217,7 +217,7 @@ export default {
       
       
       if(this.useConfirmHandler(confirmPrompt) === true) {
-        let resultFromDeact = await axios.post("/app/reinstallapp", {
+        let resultFromDeact = await axios.post("http://175.119.224.227:7337/app/reinstallapp", {
           shopId: window.cafe24aimedisonkeywordappshopid
         });
         
